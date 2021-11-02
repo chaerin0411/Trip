@@ -31,7 +31,7 @@ header #logo {
     margin: 30px 0 0 10px;
 }
 header #logo img {
-    width: 120px;
+    width: 200px;
 }
 
 /* 상단 메뉴 */
@@ -92,7 +92,7 @@ header section #main_menu a:active {
 
 /* 메인 콘텐츠 */
 #main {
-    width: 1200px;
+    width: 1000px;
     margin: auto;
 }
 
@@ -112,8 +112,11 @@ section section #category1_menu li {
     float: left;
     color: rgba( 174, 113, 249, 0.457 );
     border: 1px solid black;
-    margin: 100px;
+    margin: 50px;
     padding: 30px;
+}
+section section #category1_menu li img {
+    width: 50px;
 }
 
 /* 카테고리2 */
@@ -121,11 +124,11 @@ section #category2 {
     margin-top: 250px;
 }
 section section #category2_travel {
-    height: 70px;
+    width: 100%;
     margin: 50px;
-    border: solid 2px #F4A9A8;
 }
 section section div h3 {
+    float: left;
     font-size: 20px;
     
 }
@@ -136,6 +139,7 @@ section section div .item{
 }
 section section div .item img {
     flex: 1;
+    width: 200px;
     border-radius: 10px;
 }
 section section div .item .title{
