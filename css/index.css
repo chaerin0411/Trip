@@ -18,8 +18,16 @@ body {
 }
 
 ul {
+    margin-block-start: 0;
+    margin-block-end: 0;
+    margin-inline-start: 0;
+    margin-inline-end: 0;
+    padding-inline-start: 0;
     text-align: left;
     list-style: none;
+}
+li {
+    display: inline;
 }
 
 a:link, a:visited, a:hover, a:active {
@@ -31,6 +39,10 @@ a:link, a:visited, a:hover, a:active {
     clear: both;
 }
 
+.bdright {
+    border-right: 1px solid #aaaaaa;
+}
+
 /* header 시작 */
 
 header {
@@ -39,148 +51,217 @@ header {
 }
 
 #top {
-    border: 1px solid black;
     width: 1000px;
-    height: 50px;
-    margin: 40px auto;
+    height: 100px;
+    margin: 0 auto;
     vertical-align: middle;
 }
 
-#logo { float: left; }
-#logo_img { height: 50px; }
-
-#top_menu {
-    float: right;
-    text-align: right;
-    line-height: 50px;
+#logo {
+    float: left;
+    padding: 30px 10px 30px 40px;
 }
-#top_menu a {
-    font-size: 11px;
-    color: #888888;
-}
-#top_menu li {
-    display: inline;
-    margin-left: 10px;
-}
-#member_img { width: 40px; }
+#logo_img { height: 40px; }
 
 #main_menu {
     float: left;
+    font-size: 15px;
+    font-weight: 600;
+    color: black;
+    line-height: 120px;
     text-align: left;
 }
-#main_menu ul {
-    width: 990px;
-    margin: auto;
-    text-align: center;
+#main_menu ul { height: 100px; }
+#main_menu li { padding-left: 40px; }
+
+#top_menu {
+    float: right;
+    font-size: 12px;
+    color: #888888;
+    line-height: 20px;
+    text-align: right;
+    padding: 30px;
 }
-#main_menu li {
-    display: inline;
-    margin: 10 100px;
-    color: black;
+#top_menu li {
+    padding: 0 10px;
+    vertical-align: top;
 }
-#main_menu a {
-    color: black;
-}
-#main_menu a:hover, a:active {
-    color: rgba(247, 104, 0, 0.57);
-}
+#member { padding: 0; }
+#member_img { width: 40px; }
 
 /* header 끝 */
 /* section 시작 */
+/* 카테고리1 시작 */
 
-#main {
-    width: 1000px;
-    margin: auto;
-}
-
-/* 카테고리1 */
-#category1 {
-    margin-top: 100px;
-    font-weight: bold;
-    padding: 12px;
-    color: #ffffff;
-    text-align: center;
-}
-
+#category1 { text-align: center; }
 #category1_carousel {
+    height: 550px;
     margin: 0;
     padding: 0;
     text-align: center;
 }
 #cimg_1 { width: 100%; }
+#category1_carousel ul { text-align: center; padding-top: 20px; }
+#category1_carousel li { padding: 0 2px; }
+
+#category1_carousel div {
+    display: inline-block;
+    width: 12px;
+    height: 12px;
+    background-color: #DDDDDD;
+    border-radius: 100%;
+}
+#category1_carousel .selected { background-color: #98B5DA; }
+#category1_carousel div:hover { background-color: #4C7DBD; }
 
 #category1_menu {
-    border: 1px solid black;
-}
-#category1_menu ul {
+    height: 130px;
+    line-height: 130px;
     text-align: center;
 }
+#category1_menu ul { text-align: center; }
 #category1_menu li {
+    width: 247px;
+    height: 88px;
     display: inline-block;
-    float: left;
-    color: rgba( 174, 113, 249, 0.457 );
-    border: 1px solid black;
-    margin: 50px;
-    padding: 30px;
+    font-size: 20px;
+    font-weight: 900;
+    line-height: 84px;
+    text-align: center;
+    background-color: #F9F9F9;
+    border: 2px solid #F5F5F5;
+    margin: 0 10px;
 }
-section section #category1_menu li img {
-    width: 50px;
+#category1_menu li b { font-size: 30px; }
+#category1_menu li:hover a { color: white; }
+#category1_menu li:hover {
+    background-color: #98B5DA;
+    border: 2px solid #4C7DBD;
+}
+#category1_menu .selected {
+    background-color: #FFFFFF;
+    border: 2px solid #4C7DBD;
 }
 
-/* 카테고리2 */
-#category2 {
-    margin-top: 250px;
+/* 카테고리1 끝 */
+/* 카테고리2 시작 */
+
+#category2 { margin-top: 10px; }
+#category2_title {
+    width: 940px;
+    height: 50px;
+    line-height: 50px;
+    margin: 20px 30px;
+    border-bottom: 1px solid black;
+}
+#category2_title h3 {
+    font-size: 25px;
+    text-align: left;
 }
 
 #category2_travel {
-    height: 70px;
-    width: 100%;
-    margin: 50px;
+    width: 956px;
+    height: 350px;
+    margin: 0 auto;
 }
-
-section section div h3 {
-    float: left;
-    font-size: 20px;
-    
-}
-section section div .item{
+#category2_travel .item {
+    height: 290px;
     display: inline-block;
     text-align: center;
-    margin: 10px;
+    padding: 7px;
 }
-section section div .item img {
-    flex: 1;
-    width: 200px;
-    border-radius: 10px;
+#category2_travel .item img {
+    width: 220px;
 }
-section section div .item .title{
-    font-size: 15px;
+
+#category2_travel .itemp {
+    z-index: 1;
+    position: relative;
+    height: 75px;
+    top: -92px;
+    left: 0px;
+    padding: 7px;
+    background-color: rgba(0, 0, 0, 0.5);
+}
+#category2_travel .itemp p {
+    display: block;
     font-weight: bold;
-    margin-top: 10px;
-    color: #ffffff;
-    background-color: rgba(244, 169, 168, 0.8);
+    text-align: left;
+    color: white;
 }
-section section div .item .comment{
-    margin: 10px;
-    color: #888888;
+
+#category2_travel .itemp .title {
+    font-size: 18px;
+    color: white;
+}
+#category2_travel .itemp .comment {
+    font-size: 14px;
+    font-weight: normal;
+    color: white;
+}
+#category2_travel .itemp .price {
+    text-align: right;
+    font-size: 22px;
+    line-height: 38px;
+    color: #F1C40F;
 }
 
 #category2_travel_img {
     width: 1000px;
-    text-align: center;
+    text-align: right;
+    background-color: #F3F3F3;
 }
-#category2_travel_img img { width: 100%; }
+#category2_travel_imgcmt {
+    float: left;
+    text-align: left;
+    width: 200px;
+    padding: 50px 0 0 50px;
+}
+#category2_travel_imgcmt p {
+    font-size: 13px;
+    line-height: 22px;
+}
+#category2_travel_imgcmt p b {
+    font-size: 23px;
+    font-weight: normal;
+    line-height: 33px;
+}
+#category2_travel_imgcmt .firstp {
+    margin-top: 5px;
+}
+#category2_travel_img img {
+    width: 750px;
+}
 
+/* 카테고리2 끝 */
 /* section 끝 */
 /* footer 시작 */
 
-footer {
-    height: 700px;
-    margin-top:  50px;
+footer { margin-top: 80px; }
+#footer_menu_box {
+    height: 320px;
+    overflow: hidden;
+    background-color: #F2F2F2;
 }
 
+#footer_menu ul {
+    float: left;
+    padding: 50px;
+}
+#footer_menu li {
+    display: block;
+    line-height: 30px;
+    font-size: 16px;
+}
+#footer_menu .footer_title {
+    font-weight: bolder;
+    margin-bottom: 7px;
+    font-size: 18px;
+}
+
+/*
 #footer_menu_box {
-    height: 400px;
+    height: 320px;
     background-color: #F4A9A8;
 }
 
@@ -225,5 +306,6 @@ footer {
     display: inline-block;
     padding-left: 30px;
 }
+*/
 
 /* footer 끝 */
