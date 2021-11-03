@@ -73,6 +73,10 @@ header {
 }
 #main_menu ul { height: 100px; }
 #main_menu li { padding-left: 40px; }
+#main_menu li:hover a {
+    color: #4C7DBD;
+    border-bottom: 2px solid #4C7DBD;
+}
 
 #top_menu {
     float: right;
@@ -85,6 +89,10 @@ header {
 #top_menu li {
     padding: 0 10px;
     vertical-align: top;
+}
+#top_menu li:hover a {
+    color: black;
+    font-weight: bold;
 }
 #member { padding: 0; }
 #member_img { width: 40px; }
@@ -103,6 +111,17 @@ header {
 #cimg_1 { width: 100%; }
 #category1_carousel ul { text-align: center; padding-top: 20px; }
 #category1_carousel li { padding: 0 2px; }
+.carr {
+    z-index: 1;
+    position: relative;
+    width: 100px;
+    top: -333px;
+    left: 0px;
+    cursor: pointer;
+}
+.carr:active { border: 1px solid white; }
+#clarr { left: -390px; }
+#crarr { left: 390px; }
 
 #category1_carousel div {
     display: inline-block;
@@ -112,12 +131,16 @@ header {
     border-radius: 100%;
 }
 #category1_carousel .selected { background-color: #98B5DA; }
-#category1_carousel div:hover { background-color: #4C7DBD; }
+#category1_carousel div:hover {
+    cursor: pointer;
+    background-color: #4C7DBD;
+}
 
 #category1_menu {
     height: 130px;
     line-height: 130px;
     text-align: center;
+    margin-top: 20px;
 }
 #category1_menu ul { text-align: center; }
 #category1_menu li {
@@ -170,6 +193,10 @@ header {
     text-align: center;
     padding: 7px;
 }
+#category2_travel .item:hover {
+    padding: 5px;
+    border: 2px solid #98B5DA;
+}
 #category2_travel .item img {
     width: 220px;
 }
@@ -183,11 +210,17 @@ header {
     padding: 7px;
     background-color: rgba(0, 0, 0, 0.5);
 }
+#category2_travel .item:hover .itemp {
+    background-color: rgba(255, 255, 255, 0.7);
+}
 #category2_travel .itemp p {
     display: block;
     font-weight: bold;
     text-align: left;
     color: white;
+}
+#category2_travel .item:hover .itemp p {
+    color: black;
 }
 
 #category2_travel .itemp .title {
@@ -204,6 +237,9 @@ header {
     font-size: 22px;
     line-height: 38px;
     color: #F1C40F;
+}
+#category2_travel .item:hover .itemp .price {
+    color: #3e008f;
 }
 
 #category2_travel_img {
