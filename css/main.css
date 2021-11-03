@@ -1,0 +1,211 @@
+/* main.css */
+* { margin: 0; padding:0; }
+body {
+    font-family: "맑은 고딕", "돋움";
+    font-size: 12px;
+    color: #444444;
+}
+ul {
+    list-style-type: none;
+}
+a:link, a:visited, a:hover, a:active {
+    text-decoration: none;
+    color: #444444;
+}
+.clear {
+    clear: both;
+}
+
+/* ---------- 헤더 ------------- */
+header {
+    margin: 0 auto;
+    width: 100%;
+    height: 128px;
+}
+header #top {
+    width: 990px;
+    margin: 0 auto;
+}
+header #logo {
+    float: left;
+    margin: 30px 0 0 10px;
+}
+header #logo img {
+    width: 200px;
+}
+
+/* 상단 메뉴 */
+header section #top_menu {
+    float: right;	
+    margin-top: 5px;
+    color: #666666;
+}
+header section #top_menu a:link {
+    font-size: 11px;
+    color: #888888;
+}
+header #top_menu a:visited {
+    font-size: 11px;
+    color: #888888;
+}
+header #top_menu a:hover {
+    font-size: 11px;
+    color: #888888;
+}
+header #top_menu a:active {
+    font-size: 11px;
+    color: #888888;
+}
+header #top_menu li {
+    display: inline;
+    margin-left: 10px;
+}
+
+/* 메인 메뉴 */
+header section #main_menu {
+    height: 38px;
+    margin-top: 50px;
+}
+header section #main_menu ul {
+    width: 990px;
+    margin: auto;
+    padding-top: 120px;
+    text-align: center;
+}
+header section #main_menu li {
+    display: inline;
+    margin: 10 100px;
+    color: #ffffff;
+}
+header section #main_menu a:link {
+    color: #ffffff;
+}
+header section #main_menu a:visited {
+    color: #ffffff;
+}
+header section #main_menu a:hover {
+    color: rgba(247, 104, 0, 0.57);
+}
+header section #main_menu a:active {
+    color: rgba(247, 104, 0, 0.57);
+}
+
+/* 메인 콘텐츠 */
+#main {
+    width: 1000px;
+    margin: auto;
+}
+
+/* 카테고리1 */
+section #category1 {
+    margin-top: 100px;
+    font-weight: bold;
+    padding: 12px;
+    color: #ffffff;
+    text-align: center;
+}
+section section #category1_carousel img {
+    width: 100%;
+}
+section section #category1_menu li {
+    display: inline-block;
+    float: left;
+    color: rgba( 174, 113, 249, 0.457 );
+    border: 1px solid black;
+    margin: 50px;
+    padding: 30px;
+}
+section section #category1_menu li img {
+    width: 50px;
+}
+
+/* 카테고리2 */
+section #category2 {
+    margin-top: 250px;
+}
+section section #category2_travel {
+    width: 100%;
+    margin: 50px;
+}
+section section div h3 {
+    float: left;
+    font-size: 20px;
+    
+}
+section section div .item{
+    display: inline-block;
+    text-align: center;
+    margin: 10px;
+}
+section section div .item img {
+    flex: 1;
+    width: 200px;
+    border-radius: 10px;
+}
+section section div .item .title{
+    font-size: 15px;
+    font-weight: bold;
+    margin-top: 10px;
+    color: #ffffff;
+    background-color: rgba(244, 169, 168, 0.8);
+}
+section section div .item .comment{
+    margin: 10px;
+    color: #888888;
+}
+
+/* 푸터 */
+footer {
+    height: 700px;
+    margin-top:  50px;
+}
+footer #footer_menu_box {
+    height: 400px;
+    background-color: #F4A9A8;
+}
+footer section #footer_menu {
+    width: 990px;
+    margin: auto;
+    padding: 30px;
+}
+footer section #footer_menu ul {
+    float: left;
+    padding: 50px;
+}
+footer section #footer_menu li {
+    padding: 5px;
+    color: #ffffff;
+}
+footer section #footer_menu .title {
+    padding: 5px;
+    color: #ffffff;
+}
+footer section #footer_menu a:link {
+    color: #ffffff;
+    text-decoration: none;
+}
+footer section #footer_menu a:visited {
+    color: #ffffff;
+}
+footer section #footer_menu a:hover {
+    color: rgba(247, 104, 0, 0.57);
+    text-decoration: none;
+}
+footer section #footer_menu a:active {
+    color: rgba(247, 104, 0, 0.57);
+}
+footer #menu_box {
+    width: 990px;
+    margin: 40px;
+}
+footer #menu_box div {
+    padding: 20px;
+    margin: 10px;
+    float: left;
+}
+footer #menu_box div li {
+    float: left;
+    display: inline-block;
+    padding-left: 30px;
+}
+
