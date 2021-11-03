@@ -236,6 +236,7 @@ header {
 /* 카테고리2 끝 */
 /* section 끝 */
 /* footer 시작 */
+/* footer_menu_box 시작 */
 
 footer { margin-top: 80px; }
 #footer_menu_box {
@@ -259,53 +260,49 @@ footer { margin-top: 80px; }
     font-size: 18px;
 }
 
-/*
-#footer_menu_box {
-    height: 320px;
-    background-color: #F4A9A8;
-}
-
-#footer_menu {
-    width: 990px;
-    margin: auto;
-    padding: 30px;
-}
-#footer_menu ul {
-    float: left;
-    padding: 50px;
-}
-#footer_menu li {
-    padding: 5px;
-    color: #ffffff;
-}
-#footer_menu .title {
-    padding: 5px;
-    color: #ffffff;
-}
-#footer_menu a {
-    color: #ffffff;
-    text-decoration: none;
-}
-
-#footer_menu a:hover, a:active {
-    color: rgba(247, 104, 0, 0.57);
-    text-decoration: none;
-}
+/* footer_menu_box 끝 */
+/* menu_box 시작 */
 
 #menu_box {
-    width: 990px;
-    margin: 40px;
-}
-#menu_box div {
-    padding: 20px;
-    margin: 10px;
-    float: left;
-}
-#menu_box div li {
-    float: left;
+    margin-top: 40px;
+    height: 250px;
     display: inline-block;
-    padding-left: 30px;
+    text-align: left;
 }
-*/
+#left_menu_box {
+    float: left;
+    width: 620px;
+    height: 230px;
+}
 
+#left_menu_box_top {
+    height: 60px;
+    font-size: 15px;
+    padding: 0 30px;
+}
+#left_menu_box_top li {
+    font-size: 15px;
+    padding: 10px 25px;
+}
+
+#left_menu_box_bottom {
+    height: 130px;
+    font-size: 14px;
+    text-align: center;
+    padding: 30px 0;
+}
+#right_menu_box {
+    float: left;
+    width: 300px;
+    height: 130px;
+    padding: 60px 40px;
+}
+#right_menu_box li {
+    display: block;
+    line-height: 20px;
+    font-size: 14px;
+}
+#right_menu_box b { font-size: 21px; }
+
+/* menu_box 끝 */
 /* footer 끝 */
