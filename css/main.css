@@ -67,15 +67,14 @@ header section #main_menu {
     margin-top: 50px;
 }
 header section #main_menu ul {
-    width: 990px;
+    width: 900px;
     margin: auto;
     padding-top: 120px;
-    text-align: center;
 }
 header section #main_menu li {
-    display: inline;
-    margin: 10 100px;
-    color: #ffffff;
+    float: left;
+    margin: 20px 50px;
+    color: #888888;
 }
 header section #main_menu a:link {
     color: #ffffff;
@@ -106,14 +105,16 @@ section #category1 {
 }
 section section #category1_carousel img {
     width: 100%;
+    height: 500px;
 }
 section section #category1_menu li {
     display: inline-block;
-    float: left;
+    flex: 1;
+    width: 200px;
     color: rgba( 174, 113, 249, 0.457 );
     border: 1px solid black;
-    margin: 50px;
-    padding: 30px;
+    margin: 40px;
+    padding: 10px;
 }
 section section #category1_menu li img {
     width: 50px;
@@ -121,14 +122,13 @@ section section #category1_menu li img {
 
 /* 카테고리2 */
 section #category2 {
-    margin-top: 250px;
+    margin: 100px 0px;
 }
 section section #category2_travel {
     width: 100%;
-    margin: 50px;
 }
 section section div h3 {
-    float: left;
+    text-align: left;
     font-size: 20px;
     
 }
@@ -139,7 +139,7 @@ section section div .item{
 }
 section section div .item img {
     flex: 1;
-    width: 200px;
+    width: 225px;
     border-radius: 10px;
 }
 section section div .item .title{
@@ -208,4 +208,6 @@ footer #menu_box div li {
     display: inline-block;
     padding-left: 30px;
 }
-
+footer #menu_box div #footer_logo {
+    width: 20px;
+}
