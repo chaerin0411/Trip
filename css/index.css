@@ -108,18 +108,52 @@ header {
     padding: 0;
     text-align: center;
 }
-#cimg_1 { width: 100%; }
+#category1_carousel .window {
+    overflow: hidden;
+    position: relative;
+    display: block;
+    top: 0px;
+    left: 0px;
+    width: 1000px;
+    height: 500px;
+    margin: 0;
+    padding: 0;
+    background-color: white;
+    border-radius: 0pt;
+}
+#category1_carousel .container {
+    position: absolute;
+    text-align: left;
+    width: 4013px;
+    height: 500px;
+    margin: 0;
+    padding: 0;
+}
+#category1_carousel .container li {
+    cursor: default;
+    margin: 0;
+    padding: 0;
+}
+#category1_carousel .cimg {
+    width: 1000px;
+    margin: 0;
+    padding: 0;
+}
 #category1_carousel ul { text-align: center; padding-top: 20px; }
 #category1_carousel li { padding: 0 2px; }
 .carr {
     z-index: 1;
     position: relative;
     width: 100px;
+    height: 100px;
     top: -333px;
     left: 0px;
     cursor: pointer;
+    border: none;
+    background-color: transparent;
 }
 .carr:active { border: 1px solid white; }
+.carr img { width: 100%; }
 #clarr { left: -390px; }
 #crarr { left: 390px; }
 
