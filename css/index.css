@@ -1,7 +1,5 @@
-/* ============== index.css ============== */
-/* index.html의 css파일 */
-
 @charset "UTF-8";
+
 * {
     margin: 0;
     padding: 0;
@@ -36,15 +34,8 @@ a:link, a:visited, a:hover, a:active {
     color: #444444;
 }
 
-.clear {
-    clear: both;
-}
-
-.bdright {
-    border-right: 1px solid #aaaaaa;
-}
-
-/* header 시작 */
+.clear { clear: both; }
+.bdright { border-right: 1px solid #aaaaaa; }
 
 header {
     width: 100%;
@@ -97,10 +88,6 @@ header {
 }
 #member { padding: 0; }
 #member_img { width: 40px; }
-
-/* header 끝 */
-/* section 시작 */
-/* 카테고리1 시작 */
 
 #category1 { text-align: center; }
 #category1_carousel {
@@ -201,9 +188,6 @@ header {
     border: 2px solid #4C7DBD;
 }
 
-/* 카테고리1 끝 */
-/* 카테고리2 시작 */
-
 #category2 { margin-top: 10px; }
 #category2_title {
     width: 940px;
@@ -245,7 +229,7 @@ header {
     padding: 7px;
     background-color: rgba(0, 0, 0, 0.5);
 }
-#category2_travel .items:hover .itemp {
+#category2_travel .item:hover .itemp {
     background-color: rgba(255, 255, 255, 0.7);
 }
 #category2_travel .itemp p {
@@ -254,7 +238,7 @@ header {
     text-align: left;
     color: white;
 }
-#category2_travel .items:hover .itemp p {
+#category2_travel .item:hover .itemp p {
     color: black;
 }
 
@@ -273,7 +257,7 @@ header {
     line-height: 38px;
     color: #F1C40F;
 }
-#category2_travel .items:hover .itemp .price {
+#category2_travel .item:hover .itemp .price {
     color: #3e008f;
 }
 
@@ -304,11 +288,6 @@ header {
     width: 750px;
 }
 
-/* 카테고리2 끝 */
-/* section 끝 */
-/* footer 시작 */
-/* footer_menu_box 시작 */
-
 footer { margin-top: 80px; }
 #footer_menu_box {
     height: 320px;
@@ -330,9 +309,6 @@ footer { margin-top: 80px; }
     margin-bottom: 7px;
     font-size: 18px;
 }
-
-/* footer_menu_box 끝 */
-/* menu_box 시작 */
 
 #menu_box {
     margin-top: 40px;
@@ -374,6 +350,3 @@ footer { margin-top: 80px; }
     font-size: 14px;
 }
 #right_menu_box b { font-size: 21px; }
-
-/* menu_box 끝 */
-/* footer 끝 */

@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>항공권 예약 사이트 - 로그인</title>
+    <link rel="stylesheet" type="text/css" href="./css/login.css">
+</head>
+<body>
+    <header><!-- header 시작 -->
+        <section id="top"><!-- section top 시작 -->
+            <a id="logo" href="./index.html"><img id="logo_img" src="./img/logo.png"></a>
+            <nav id="top_menu">
+                <ul>
+                    <li class="bdright"><a href="#">로그인</a></li>
+                    <li><a href="#">회원가입</a></li>
+                    <li id="member"><a href="#"><img id="member_img" src="./img/member.png"></a></li>
+                </ul>
+            </nav>
+            <nav id="main_menu">
+                <ul>
+                    <li><a href="./index.html">메인</a></li>
+                    <li><a href="#">항공권 예약</a></li>
+                    <li><a href="#">여행지 정보</a></li>
+                    <li><a href="#">마이페이지</a></li>
+                </ul>
+            </nav>
+        </section> <!-- section top 끝 -->
+
+        <nav id="navi"> <!-- navi 시작 -->
+            <ul>
+                <li><a href="./index.html"><img src="./img/home.png"></a></li>
+                <li>&#5171;</li>
+                <li><a href="./login.html">로그인</a></li>
+            </ul>
+        </nav> <!-- navi 끝 -->
+    </header> <!-- header 끝 -->
+
+    <section id="main"><!-- section main 시작 -->
+        <h3>로그인 - Log in Page</h3>
+        <form id="login">
+            <fieldset id="login_form">
+                <legend class="hidden">로그인</legend>
+
+                <div id="id_area">
+                    <div class="input_row">
+                        <div class="img"><img src="./img/id.png"></div>
+                        <div class="input_box">
+                            <input id="id" type="text" name="id" placeholder="아이디">
+                        </div>
+                    </div>
+                </div>
+
+                <div id="pw_area">
+                    <div class="input_row">
+                        <div class="img"><img src="./img/pw.png"></div>
+                        <div class="input_box">
+                            <input id="pw" type="password" name="pw" placeholder="비밀번호">
+                        </div>
+                    </div>
+                </div>
+                                
+                <div id="etc_area">
+                    <div id="linkbox">
+                        <ul>
+                            <li class="bdright"><a href="#">아이디 찾기</a></li>
+                            <li><a href="#">비밀번호 찾기</a></li>
+                        </ul>
+                    </div>
+                    <div id="checkbox">
+                        <input type="checkbox" name="nvlong">
+                        <label for="login_check">아이디 저장</label>
+                    </div>
+                </div>
+            </fieldset>
+            <div id="submit_area"><input type="submit" title="로그인" alt="로그인" value="로그인"></div>
+        </form>
+        <button id="signup_btn">회원가입</button>
+    </section> <!-- section main 끝 -->
+
+    <footer><!-- footer 시작 -->
+        <section id="footer_menu_box"><!-- section footer_menu_box 시작 -->
+            <nav id="footer_menu">
+                <!-- footer_menu 시작 -->
+                <ul>
+                    <li class="footer_title"><a href="#">회사소개</a></li>
+                    <li><a href="#">TRIP에 대하여</a></li>
+                    <li><a href="#">기업지배구조</a></li>
+                    <li><a href="#">투자정보</a></li>
+                    <li><a href="#">지속가능경영</a></li>
+                    <li><a href="#">뉴스룸</a></li>
+                </ul>
+                <ul>
+                    <li class="footer_title">고객지원</li>
+                    <li><a href="#">공지사항</a></li>
+                    <li><a href="#">챗봇 서비스</a></li>
+                    <li><a href="#">자주 묻는 질문</a></li>
+                    <li><a href="#">고객의 말씀</a></li>
+                    <li><a href="#">서비스 센터</a></li>
+                    <li><a href="#">e-서식함</a></li>
+                </ul>
+                <ul>
+                    <li class="footer_title">약관 및 규정</li>
+                    <li><a href="#">개인정보 처리방침</a></li>
+                    <li><a href="#">이용약관</a></li>
+                    <li><a href="#">운송약관 및 고지사항</a></li>
+                    <li><a href="#">소비자 안전 관련 정보</a></li>
+                    <li><a href="#">운임 및 서비스 요금표</a></li>
+                </ul>
+                <ul>
+                    <li class="footer_title">기타안내</li>
+                    <li><a href="#">초등학생 견학 신청</a></li>
+                    <li><a href="#">고객 안내 서비스</a></li>
+                    <li><a href="#">항공교통이용자 서비스 계획</a></li>
+                    <li><a href="#">항공교통이용자 피해 구제</a></li>
+                    <li><a href="#">관련 사이트</a></li>
+                    <li><a href="#">사이트맵</a></li>
+                </ul>
+            </nav> <!-- footer_menu 끝 -->
+        </section> <!-- section footer_menu_box 끝 -->
+
+        <section id="menu_box"><!-- section footer_box 시작 -->
+            <div id="left_menu_box">
+            <div id="left_menu_box_top">
+                <ul>
+                    <li style="background-color: #F3F3F3;">대한민국</li>
+                    <li style="text-decoration: underline;"><b>한국어</b></li>
+                    <li style="color: gray">English</li>
+                </ul>
+            </div>
+            <div id="left_menu_box_bottom">
+                <p>본 콘텐츠의 저작권은 저작권자 또는 제공처에 있으며,</p>
+                <p>이를 무단 이용하는 경우 저작권법 등에 따라 법적 책임을 질 수 있습니다.</p>
+                <p>　</p>
+                <p>Copyright © Trip Corp. All Rights Reserved</p>
+            </div>
+            </div>
+            <div id="right_menu_box">
+                <ul>
+                    <li style="margin-bottom: 8px;"><b>(주)TRIP &#x1F4AC;</b></li>
+                    <li>사업자 등록번호: 000-0000-0000</li>
+                    <li>대표이사: 전채린, 엄지희</li>
+                    <li>대표전화: 1588-1598</li>
+                    <li>주소: 경기도 파주시 광탕면 분수리 47306</li>
+                </ul>
+            </div>
+        </section> <!-- section footer_box 끝 -->
+    </footer> <!-- footer 끝 -->
+</body>
+</html>
