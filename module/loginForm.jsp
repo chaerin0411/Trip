@@ -9,9 +9,9 @@
 <body>
 <%
 	String memberId		= (String)session.getAttribute("memberId");
-	String memberPwd	= (String)session.getAttribute("memberPwd");	
+	String memberPwd	= (String)session.getAttribute("memberPwd");
 	String memberLogin	= (String)session.getAttribute("memberLogin");
-	
+
 	String loginPcs		= (String)session.getAttribute("loginPcs");
 	String loginSave	= (String)session.getAttribute("loginSave");
  	String idStr = null, pwStr = null, checkStr = null;
@@ -77,7 +77,9 @@
             </fieldset>
             <div id="submit_area"><input type="submit" value="로그인"></div>
         </form>
-        <button id="signup_btn">회원가입</button>
+        <form action="index.jsp?CONTENTPAGE=joinForm.jsp" method="post">
+        	<button id="signup_btn">회원가입</button>
+        </form>
     </section> <!-- section main 끝 -->
 </body>
 </html>

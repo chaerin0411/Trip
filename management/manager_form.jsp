@@ -1,30 +1,21 @@
-<%@ page contentType="text/html; charset=utf-8" %>
-<!DOCTYPE html>
+<%@ page language="java" contentType="text/html; charset=UTF-8"
+    pageEncoding="UTF-8" errorPage="error.jsp"%>
+    
+<!DOCTYPE HTML>
 <html>
 <head>
-	<meta charset="UTF-8">
-	<title>항공권 예약 사이트 - 회원가입</title>
-    <link rel="stylesheet" href="css/join.css" type="text/css" media="screen" />
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<title>회원관리:작성화면</title>
+<link rel="stylesheet" href="../css/manager.css" type="text/css" media="screen" />
 </head>
 <body>
-	<header>
-	<!-- header 시작 -->
-		<nav id="navi">
-		<!-- navi 시작 -->
-            <ul>
-                <li><a href="index.jsp?CONTENTPAGE=content.jsp"><img src="img/home.png"></a></li>
-                <li>&#5171;</li>
-                <li><a href="index.jsp?CONTENTPAGE=loginForm.jsp">회원가입</a></li>
-            </ul>
-        </nav> <!-- navi 끝 -->
-    </header> <!-- header 끝 -->
-
-    <section id="main">
-    <!-- section main 시작 -->
-        <div align="center">
-<h3>회원가입 - Sign up Page</h3>
-<hr>
-<form name=form1 method=post action="../management/manager_control.jsp">
+<section id="main">
+<!-- section main 시작 -->
+<div align="center">
+<H2>회원관리:작성화면</H2>
+<HR>
+[<a href=manager_list.jsp>회원 목록으로</a>] <P>
+<form name=form1 method=post action="manager_control.jsp">
 <input type=hidden name="action" value="insert">
 <table border="1">
   <tr>
@@ -61,6 +52,6 @@
 </table>
 </form>
 </div>
-    </section> <!-- section main 끝 -->
+</section> <!-- section main 끝 -->
 </body>
 </html>
