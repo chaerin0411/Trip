@@ -1,59 +1,89 @@
-<%@ page language="java" contentType="text/html; charset=UTF-8"
-    pageEncoding="UTF-8"%>
+<%@ page contentType="text/html; charset=utf-8" %>
+
 <!DOCTYPE html>
 <html>
 <head>
 	<meta charset="UTF-8">
-	<title>joinForm.jsp</title>
+	<title>항공권 예약 사이트 - 회원가입</title>
+    <link rel="stylesheet" href="css/join.css" type="text/css" media="screen" />
+    <script>
+    function check() {
+    	if (join.member_id.value == "") {
+    		alert("값을 입력해주세요!");
+    		join.member_id.focus(); return false;
+    	} else if (join.member_pwd.value == "") {
+    		alert("값을 입력해주세요!");
+    		join.member_pwd.focus(); return false;
+    	} else return true;
+    }
+    </script>
 </head>
 <body>
 <%
- 	String memLogin = (String)session.getAttribute("memLogin");
- 	String id = (String)session.getAttribute("memId");
- 	String pw = (String)session.getAttribute("memPw");
- 	String check = (String)session.getAttribute("memSave");
-	String idStr = null, pwStr = null, checkStr = null;
-%>
+	String verified = (String)session.getAttribute("verified");
+	if (verified != null) { %>
+		<script>alert("이미 존재하는 아이디입니다!");</script><%
+		session.removeAttribute("verified");
+	}
+ %>
+	<header>
+	<!-- header 시작 -->
+		<nav id="navi">
+		<!-- navi 시작 -->
+            <ul>
+                <li><a href="index.jsp?CONTENTPAGE=content.jsp"><img src="img/home.png"></a></li>
+                <li>&#5171;</li>
+                <li><a href="index.jsp?CONTENTPAGE=joinForm.jsp">회원가입</a></li>
+            </ul>
+        </nav> <!-- navi 끝 -->
+    </header> <!-- header 끝 -->
 
-	<h3>회원가입-Sign up Page</h3>
-	<div align="center">
-	<form action="#" method="post">
-	<table border="1">
+    <section id="main">
+    <!-- section main 시작 -->
+        <div align="center">
+        
+<h3>회원가입 - Sign up Page</h3>
+<hr>
+<form name="join" method="post" onsubmit="return check()" action="module/joinInsert.jsp">
+<input type="hidden" name="action" value="insert">
+<table border="1">
   <tr>
     <th>아이디</th>	
-    <td><input type="text" name="memberId" placeholder="myid" maxlength="15"></td>
-    <td><input type="checkbox" name="idSave" value="c1" <%=checkStr %>> 아이디 중복체크<br>
+    <td><input type="text" name="member_id" maxlength="10"></td>
   </tr>
   <tr>
-    <th>패스워드</th>
-    <td><input type="password" name="password" placeholder="mypassword" maxlength="20"></td>
+    <th>비밀번호</th>
+    <td><input type="password" name="member_pwd" maxlength="50"></td>
   </tr>
   <tr>
-    <th>이메일</th>
-    <td><input type="email" name="email" placeholder="abc123@gmail.com" maxlength="20"></td>
+    <th>이름</th>
+    <td><input type="text" name="member_name" maxlength="20"></td>
   </tr>
   <tr>
     <th>생년월일</th>
-    <td><input type="date" name="birth" placeholder="2000.01.01"></td>
-  </tr> 
+    <td><input type="date" name="member_birth"></td>
+  </tr>  
   <tr>
     <th>전화번호</th>
-    <td><input type="text" name="tel" maxlength="20"></td>
+    <td><input type="text" name="member_tel" maxlength="20"></td>
   </tr>
-  <tr> 
+  <tr>
+    <th>이메일</th>
+    <td><input type="email" name="member_email"></td>
+  </tr>
   <tr>
     <th>주소</th>
-    <td><input type="text" name="addr" placeholder="서울시 구로구 고척동 62-160" maxlength="50"></td>
+    <td><input type="text" name="member_addr"></td>
   </tr>
   <tr>
-    <th>상세주소</th>
-    <td><input type="text" name="addrDetail" placeholder="동양미래대학교 3호관 1층 102호"></td>
-  </tr>
-  <tr>
-    <td colspan=2 align=center><input type=reset value="취소"><input type=submit value="저장"></td>
-	</tr>
-	</table>	
+    <td colspan=2 align=center>
+    <input type=submit value="저장">
+    <input type=reset value="취소"></td>
+</tr>
+</table>
 </form>
+
 </div>
+</section> <!-- section main 끝 -->
 </body>
 </html>

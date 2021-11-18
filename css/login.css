@@ -1,47 +1,7 @@
-<<<<<<< HEAD
 @charset "UTF-8";
-=======
-/* ============== login.css ============== */
-/* login.jsp의 css파일 */
-
-@charset "UTF-8";
-* {
-    margin: 0;
-    padding: 0;
-}
-
-body {
-    user-select: none;
-    font-family: '맑은 고딕', '돋움', sans-serif;
-    font-size: 12px;
-    color: #444444;
-    max-width: 1000px;
-    margin: 0 auto;
-    text-align: center;
-    background-color: white;
-}
-
-ul {
-    margin-block-start: 0;
-    margin-block-end: 0;
-    margin-inline-start: 0;
-    margin-inline-end: 0;
-    padding-inline-start: 0;
-    text-align: left;
-    list-style: none;
-}
-li {
-    display: inline;
-}
-
-a:link, a:visited, a:hover, a:active {
-    text-decoration: none;
-    color: #444444;
-}
->>>>>>> af819e25787226c3f63fc72b192dcc80c121f526
 
 .clear { clear: both; }
-.bdright { border-right: 1px solid #aaaaaa; }
+.bdright { border-right: 1px solid #AAAAAA; }
 .hidden { display: none; }
 
 form { display: block; }
@@ -52,62 +12,6 @@ fieldset {
     border: 0;
 }
 
-<<<<<<< HEAD
-=======
-/* header 시작 */
-
-header {
-    width: 100%;
-    margin: 0 auto;
-}
-
-#top {
-    width: 1000px;
-    height: 100px;
-    margin: 0 auto;
-    vertical-align: middle;
-}
-
-#logo {
-    float: left;
-    padding: 30px 10px 30px 40px;
-}
-#logo_img { height: 40px; }
-
-#main_menu {
-    float: left;
-    font-size: 15px;
-    font-weight: 600;
-    color: black;
-    line-height: 120px;
-    text-align: left;
-}
-#main_menu ul { height: 100px; }
-#main_menu li { padding-left: 40px; }
-#main_menu li:hover a {
-    color: #4C7DBD;
-    border-bottom: 2px solid #4C7DBD;
-}
-
-#top_menu {
-    float: right;
-    font-size: 12px;
-    color: #888888;
-    line-height: 20px;
-    text-align: right;
-    padding: 30px;
-}
-#top_menu li {
-    padding: 0 10px;
-    vertical-align: top;
-}
-#top_menu li:hover a {
-    color: black;
-    font-weight: bold;
-}
-#member { padding: 0; }
-#member_img { width: 40px; }
->>>>>>> af819e25787226c3f63fc72b192dcc80c121f526
 
 #navi {
     width: 1000px;
@@ -115,8 +19,7 @@ header {
     line-height: 22px;
     font-size: 14px;
     font-weight: bold;
-    padding: 5px;
-    padding-left: 100px;
+    padding: 4px 5px 7px 100px;
     background-color: lightgray;
 }
 #navi ul { height: 26px; }
@@ -130,21 +33,13 @@ header {
 }
 #navi img { width: 20px; }
 
-<<<<<<< HEAD
-=======
-/* header 끝 */
-/* section 시작 */
->>>>>>> af819e25787226c3f63fc72b192dcc80c121f526
 
 #main {
     text-align: center;
     max-width: 450px;
     margin: 0 auto;
     margin-top: 70px;
-<<<<<<< HEAD
     margin-bottom: 170px;
-=======
->>>>>>> af819e25787226c3f63fc72b192dcc80c121f526
 }
 #main h3 {
     font-size: 25px;
@@ -265,79 +160,3 @@ header {
     border-radius: 5px;
     background-color: #5E5E5E;
 }
-
-<<<<<<< HEAD
-=======
-/* section 끝 */
-/* footer 시작 */
-/* footer_menu_box 시작 */
-
-footer { margin-top: 170px; }
-#footer_menu_box {
-    height: 320px;
-    overflow: hidden;
-    background-color: #F2F2F2;
-}
-
-#footer_menu ul {
-    float: left;
-    padding: 50px;
-}
-#footer_menu li {
-    display: block;
-    line-height: 30px;
-    font-size: 16px;
-}
-#footer_menu .footer_title {
-    font-weight: bolder;
-    margin-bottom: 7px;
-    font-size: 18px;
-}
-
-/* footer_menu_box 끝 */
-/* menu_box 시작 */
-
-#menu_box {
-    margin-top: 40px;
-    height: 250px;
-    display: inline-block;
-    text-align: left;
-}
-#left_menu_box {
-    float: left;
-    width: 620px;
-    height: 230px;
-}
-
-#left_menu_box_top {
-    height: 60px;
-    font-size: 15px;
-    padding: 0 30px;
-}
-#left_menu_box_top li {
-    font-size: 15px;
-    padding: 10px 25px;
-}
-
-#left_menu_box_bottom {
-    height: 130px;
-    font-size: 14px;
-    text-align: center;
-    padding: 30px 0;
-}
-#right_menu_box {
-    float: left;
-    width: 300px;
-    height: 130px;
-    padding: 60px 40px;
-}
-#right_menu_box li {
-    display: block;
-    line-height: 20px;
-    font-size: 14px;
-}
-#right_menu_box b { font-size: 21px; }
-
-/* menu_box 끝 */
-/* footer 끝 */
->>>>>>> af819e25787226c3f63fc72b192dcc80c121f526
