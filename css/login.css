@@ -1,7 +1,7 @@
 @charset "UTF-8";
 
 .clear { clear: both; }
-.bdright { border-right: 1px solid #aaaaaa; }
+.bdright { border-right: 1px solid #AAAAAA; }
 .hidden { display: none; }
 
 form { display: block; }
@@ -19,8 +19,7 @@ fieldset {
     line-height: 22px;
     font-size: 14px;
     font-weight: bold;
-    padding: 5px;
-    padding-left: 100px;
+    padding: 4px 5px 7px 100px;
     background-color: lightgray;
 }
 #navi ul { height: 26px; }
