@@ -94,3 +94,21 @@ input[type="submit"],[type="reset"],[type="button"] {
 	background-color: #2967B9;
 	color: white;
 }
+
+input[name="member_id"] {
+	display: inline;
+	vertical-align: middle;
+	width: 190px;
+}
+
+button[name="verify_id"] {
+	display: inline;
+	vertical-align: middle;
+	height: 25px;
+	width: 55px;
+	margin: 0;
+	padding: 0;
+	font-size:10px;
+	background-color: #DDDDDD;
+	color: black;
+}
