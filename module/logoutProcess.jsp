@@ -4,7 +4,7 @@
 		session.removeAttribute("member_id");
 		session.removeAttribute("member_pwd");
 	}
-	session.removeAttribute("memberLogin");
+	session.removeAttribute("member_login");
 	session.removeAttribute("loginPcs");
 	response.sendRedirect("../index.jsp?CONTENTPAGE=content.jsp");
 %>
