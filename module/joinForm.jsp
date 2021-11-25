@@ -19,13 +19,13 @@
     </script>
 </head>
 <body>
-  <%
-    String verified = (String)session.getAttribute("verified");
-    if (verified != null) { %>
-      <script>alert("이미 존재하는 아이디입니다!");</script><%
-      session.removeAttribute("verified");
-    }
-   %>
+<%
+	String verified = (String)session.getAttribute("verified");
+	if (verified != null) { %>
+		<script>alert("이미 존재하는 아이디입니다!");</script><%
+		session.removeAttribute("verified");
+	}
+ %>
 	<header>
 	<!-- header 시작 -->
 		<nav id="navi">

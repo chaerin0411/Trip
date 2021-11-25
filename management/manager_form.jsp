@@ -22,7 +22,7 @@
   </tr>
   <tr>
     <th>비밀번호</th>
-    <td><input type="text" name="member_pwd" maxlength="10"></td>
+    <td><input type="email" name="member_pwd" maxlength="50"></td>
   </tr>
   <tr>
     <th>이름</th>
