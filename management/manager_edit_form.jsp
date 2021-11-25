@@ -4,7 +4,7 @@
 <!DOCTYPE HTML>
 <html>
 <head>
-<link rel="stylesheet" href="../css/manager.css" type="text/css" media="screen" />
+<link rel="stylesheet" href="../css/form.css" type="text/css" media="screen" />
 
 <script type="text/javascript">
 	function delcheck() {
@@ -31,20 +31,13 @@
 [<a href=manager_control.jsp?action=list>회원관리 목록으로</a>] <p>
 <form name=form1 method=post action=manager_control.jsp>
 <input type=hidden name="member_id" value="<%=mb.getMember_id()%>">
+<input type=hidden name="member_pwd" value="<%=mb.getMember_pwd() %>">
 <input type=hidden name="action" value="update">
 
 <table border="1">
   <tr>
-    <th>아이디</th>
-    <td><input type="text" name="member_id" value="<%=mb.getMember_id() %>"></td>
-  </tr>
-  <tr>
-    <th>비밀번호</th>
-    <td><input type="password" name="member_pwd" value="<%=mb.getMember_pwd() %>"></td>
-  </tr>
-    <tr>
     <th>이름</th>
-    <td><input type="email" name="membeR_name" value="<%=mb.getMember_name() %>"></td>
+    <td><input type="text" name="member_name" value="<%=mb.getMember_name() %>"></td>
   </tr>
       <tr>
     <th>생년월일</th>
@@ -52,15 +45,15 @@
   </tr>
   <tr>
     <th>전화번호</th>
-    <td><input type="text" name="mb_tel" value="<%=mb.getMember_tel() %>"></td>
+    <td><input type="text" name="member_tel" value="<%=mb.getMember_tel() %>"></td>
   </tr>
   <tr>
     <th>이메일</th>
-    <td><input type="text" name="mb_email" value="<%=mb.getMember_email() %>"></td>
+    <td><input type="email" name="member_email" value="<%=mb.getMember_email() %>"></td>
   </tr>
   <tr>
     <th>주소</th>
-    <td><input type="text" name="mb_addr" value="<%=mb.getMember_addr() %>"></td>
+    <td><input type="text" name="member_addr" value="<%=mb.getMember_addr() %>"></td>
   </tr>
   <tr>
     <td colspan=2 align=center><input type=submit value="저장"><input type=reset value="취소"><input type="button" value="삭제" onClick="delcheck()"></td>

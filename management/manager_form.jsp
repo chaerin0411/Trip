@@ -1,20 +1,18 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
-    pageEncoding="UTF-8" errorPage="error.jsp"%>
-    
+    pageEncoding="UTF-8" errorPage="manager_error.jsp"%>
+ 
 <!DOCTYPE HTML>
 <html>
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
 <title>회원관리:작성화면</title>
-<link rel="stylesheet" href="../css/manager.css" type="text/css" media="screen" />
+<link rel="stylesheet" href="../css/form.css" type="text/css" media="screen" />
 </head>
 <body>
-<section id="main">
-<!-- section main 시작 -->
 <div align="center">
 <H2>회원관리:작성화면</H2>
 <HR>
-[<a href=manager_list.jsp>회원 목록으로</a>] <P>
+[<a href=manager_control.jsp?action=list>회원 목록으로</a>] <P>
 <form name=form1 method=post action="manager_control.jsp">
 <input type=hidden name="action" value="insert">
 <table border="1">
@@ -40,7 +38,7 @@
   </tr>
   <tr>
     <th>이메일</th>
-    <td><input type="text" name="member_email"></td>
+    <td><input type="email" name="member_email"></td>
   </tr>
   <tr>
     <th>주소</th>
@@ -52,6 +50,5 @@
 </table>
 </form>
 </div>
-</section> <!-- section main 끝 -->
 </body>
 </html>

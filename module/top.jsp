@@ -1,10 +1,9 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
     pageEncoding="UTF-8"%>
 
-<%	
-	String memberId		= (String)session.getAttribute("memberId");
-	String memberLogin	= (String)session.getAttribute("memberLogin");
-	String memberName	= (String)session.getAttribute("memberName");
+<%
+	String memberName	= (String)session.getAttribute("member_name");
+	String memberLogin	= (String)session.getAttribute("member_login");
 	String memberStr = "", loginStr = null, linkStr = null;
 	
 	if (memberLogin == null) {

@@ -1,59 +1,31 @@
 <%@ page contentType="text/html; charset=utf-8" %>
-<%@ page import = "java.sql.*" %>
+<%@ page import = "java.sql.*, memberManagement.*" %>
+
+<jsp:useBean id="mbean" class="memberManagement.ManagementBean" scope="session"/> 
+<jsp:useBean id="mb" class="memberManagement.ManagementBook" scope="session"/>
 
 <%
-	Class.forName("com.mysql.cj.jdbc.Driver");
-	Connection conn = null;
-	Statement stmt = null;
-	ResultSet rs = null;
-	
-	String id = request.getParameter("id");
-	String pw = request.getParameter("pw");
-	String link = null;
+	String member_id = request.getParameter("member_id");
+	String member_pwd = request.getParameter("member_pwd");
+	String member_name = mbean.loginCheck(member_id,member_pwd); 
 		
-	try {
-		String jdbcDriver = "jdbc:mysql://localhost:3306/tripdb?" +
-							"useUnicode=true&characterEncoding=utf-8&" +
-							"serverTimezone=UTC&useSSL=false";
-		String query = "select * from member order by MEMBER_ID";
-		String dbUser = "root"; String dbPass = "admin";
+	if (member_name != null) {	
+		session.setAttribute("member_login", "ok");
+		if(request.getParameter("save") == null) {
+			session.removeAttribute("loginSave");
+		} else { session.setAttribute("loginSave", "check"); }
 		
-		conn = DriverManager.getConnection(jdbcDriver, dbUser, dbPass);
-		stmt = conn.createStatement();
-		rs = stmt.executeQuery(query);
+		session.setAttribute("member_id", member_id);
+		session.setAttribute("member_pwd", member_pwd);
+		session.setAttribute("member_name", member_name);
+		mb = mbean.getDB(mb.getMember_id());
 		
-		while(rs.next()) {
-			String memberId = (String)rs.getString("MEMBER_ID");
-			String memberPwd = (String)rs.getString("MEMBER_PWD");
-			String memberName = (String)rs.getString("MEMBER_NAME");
-			
-			if(id.equals(memberId) && pw.equals(memberPwd)) {
-				session.setAttribute("memberLogin", "ok");
-				if(request.getParameter("save") == null) {
-					session.removeAttribute("loginSave");
-				} else { session.setAttribute("loginSave", "check"); }
-				session.setAttribute("memberId", memberId);
-				session.setAttribute("memberPwd", memberPwd);
-				session.setAttribute("memberName", memberName);
-				
-				if(id.equals("admin") && pw.equals("admin")) {
-					link = "../management/manager.jsp"; break;
-				} else {
-					link = "../index.jsp?CONTENTPAGE=content.jsp"; break;
-				}
-			}
-			else {
-				session.setAttribute("loginPcs", "false");
-				link = "../index.jsp?CONTENTPAGE=loginForm.jsp"; continue;
-			}
-		}
-	} catch (SQLException ex) {
-		out.println(ex.getMessage());
-		ex.printStackTrace();
-	} finally {
-		if (rs != null) try { rs.close(); } catch (SQLException ex) {}
-		if (stmt != null) try { stmt.close(); } catch (SQLException ex) {}
-		if (conn != null) try { conn.close(); } catch (SQLException ex) {}
-		response.sendRedirect(link);
+		if(member_id.equals("admin") && member_pwd.equals("admin"))
+			response.sendRedirect("../management/manager_control.jsp?action=list");
+		else response.sendRedirect("../index.jsp?CONTENTPAGE=content.jsp");
+	}
+	else {
+		session.setAttribute("loginPcs", "false");
+		response.sendRedirect("../index.jsp?CONTENTPAGE=loginForm.jsp");
 	}
 %>
