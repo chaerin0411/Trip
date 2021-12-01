@@ -13,7 +13,6 @@
 	String loginSave  = (String)session.getAttribute("loginSave");
 	String loginPcs = (String)session.getAttribute("loginPcs");
 	String joinEnd = (String)session.getAttribute("joinEnd");
-	String firstLogin = (String)session.getAttribute("firstLogin");
  	String idStr = null, pwStr = null, checkStr = null; 
  	
  	if (loginSave == null) { idStr = ""; pwStr = ""; checkStr = ""; }
@@ -26,10 +25,6 @@
  	if (joinEnd != null) {
  		%><script>alert("회원가입이 완료되었습니다!");</script><%
 		session.removeAttribute("joinEnd");
- 	}
- 	if (firstLogin != null) {
- 		%><script>alert("로그인 이후 접근 가능한 페이지입니다!");</script><%
-		session.removeAttribute("firstLogin");
  	}
  %>
 	<header>
