@@ -9,8 +9,8 @@
 <jsp:setProperty name="rb" property="*"/> 
 
 <% 
-	// 컨트롤러 요청 파라미터
-	String action = request.getParameter("action");
+	String action = request.getParameter("action"); // 컨트롤러 요청 파라미터
+	String memberLogin = (String)session.getAttribute("member_login"); // 로그인 확인 파라미터
 
 	// 파라미터에 따른 요청 처리
 	// 항공권 예약정보 목록 요청인 경우
@@ -50,16 +50,23 @@
 	
 	// 전체 항공권 검색 요청인 경우
 	else if(action.equals("search")) {
+		
+		if(memberLogin == null) {
+			session.setAttribute("firstLogin", "yet");
+			response.sendRedirect("../index.jsp?CONTENTPAGE=loginForm.jsp");
+		}
+		else { // 로그인 되어있음
 			ArrayList<ReservationBook> sDatas = rbean.getScheduleList();
 			session.setAttribute("sDatas", sDatas);
 			response.sendRedirect("../index.jsp?CONTENTPAGE=reservation.jsp");
+		}
 	}
 	
 	// 특정 도시 항공권 검색 요청인 경우
 	else if(action.equals("csearch")) {
-			ArrayList<ReservationBook> sDatas = rbean.getSchedule(rb.getStart_port(), rb.getEnd_port());
-			session.setAttribute("sDatas", sDatas);
-			response.sendRedirect("../index.jsp?CONTENTPAGE=reservationProcess1.jsp");
+		ArrayList<ReservationBook> sDatas = rbean.getSchedule(rb.getStart_port(), rb.getEnd_port());
+		session.setAttribute("sDatas", sDatas);
+		response.sendRedirect("../index.jsp?CONTENTPAGE=reservationProcess1.jsp");
 	}
 	// 특정 항공권 검색 요청인 경우
 	else if(action.equals("ssearch")) {
