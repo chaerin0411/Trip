@@ -14,7 +14,6 @@ public class ReservationBook { // 멤버변수 선언
 	private String nation;
 
 	// airplane
-	private String airplane_no;
 	private String airline_name;
 	private Integer total_seatnum;
 
@@ -34,17 +33,19 @@ public class ReservationBook { // 멤버변수 선언
 	private String end_port;
 	private Integer freightfee;
 
-	// reservation
-	private Integer reservation_no;
-	private String member_id;
-	private String date;
-	private Integer ticket_price;
+	private String start_port;
+	private String end_port;
+	private Integer passenger_number;
+	private String grade;
+	private String seat;
+	private String airplane_no;
+	private String departure_time;
+	private String arrival_time;
+	private Integer freightfee;
 
 	// order
 	private String order;
-	private Integer passenger_number;
 
-	
 	// airport
 	public String getAirport_no() { return airport_no; }
 	public void setAirport_no(String airport_no) {
@@ -106,7 +107,6 @@ public class ReservationBook { // 멤버변수 선언
 	public void setArrival_time(String arrival_time) {
 		this.arrival_time = arrival_time;
 	}
-	public String getStart_port() { return start_port; }
 	public void setStart_port(String start_port) {
 		this.start_port = start_port;
 	}
@@ -118,16 +118,7 @@ public class ReservationBook { // 멤버변수 선언
 	public void setFreightfee(Integer freightfee) {
 		this.freightfee = freightfee;
 	}
-
-	// reservation
-	public Integer getReservation_no() { return reservation_no; }
-	public void setReservation_no(Integer reservation_no) {
-		this.reservation_no = reservation_no;
-	}
-	public String getMember_id() { return member_id; }
-	public void setMember_id(String member_id) {
-		this.member_id = member_id;
-	}
+	
 	public String getDate() { return date; }
 	public void setDate(String date) {
 		this.date = date;
