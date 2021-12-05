@@ -1,0 +1,44 @@
+#main {
+    text-align: center;
+    max-width: 1000px;
+    max-height: 4500px;
+    margin: 0 auto;
+    margin-top: 70px;
+    padding: 100px;
+    margin-bottom: 170px;
+    background-color: #eeeeee;
+    border-radius: 100px;
+}
+
+table {
+	width: 750px;
+	border-collapse: collapse;
+	text-align: center;
+	margin: 40px;
+}
+ 
+td,th {
+	font-size: 10pt;
+	height: 30px;
+	padding: 5px;
+}
+th {
+	background-color: #dddddd;
+	color: #ffffff;
+	font-family: Georgia;
+}
+tr { background-color: #ffffff; }
+td {
+	width: 10px;
+	height: 15px;
+	color: #000000;
+	padding: 2px;
+	background-color: #eeeeee;
+}
+
+td input[type="submit"] {
+	width: 100%;
+	height: 100%;
+	margin: 0;
+	border: 1px solid #888888;
+}
