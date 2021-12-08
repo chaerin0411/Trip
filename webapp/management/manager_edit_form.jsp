@@ -5,6 +5,7 @@
 <html>
 <head>
 <link rel="stylesheet" href="../css/form.css" type="text/css" media="screen" />
+<link rel="stylesheet" href="../css/index.css" type="text/css" media="screen" />
 
 <script type="text/javascript">
 	function delcheck() {
@@ -18,6 +19,7 @@
 			return;
 	}
 </script>
+
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
 <title>회원관리:수정화면</title>
 </head>
@@ -25,10 +27,26 @@
 <jsp:useBean id="mb" scope="session" class="memberManagement.ManagementBook" />
 
 <body>
+<br><br>
+<header>
+<!-- header 시작 -->	
+<jsp:include page="top.jsp" flush="false"/>
+<nav id="navi">
+<!-- navi 시작 -->
+	<ul>
+		<li><a href="../index.jsp?CONTENTPAGE=content.jsp">
+			<img src="../img/home.png"></a></li>
+		<li>&#5171;</li>
+		<li>회원관리:수정화면</li>
+	</ul>
+</nav><!-- navi 끝 -->
+</header><!-- header 끝 -->
+	
 <div align="center">
-<H2>회원관리:수정화면 </H2>
-<HR>
-[<a href=manager_control.jsp?action=list>회원관리 목록으로</a>] <p>
+<br><br>
+<h3>회원관리:수정화면 </h3>
+<hr><br><br>
+<h2><a href=manager_control.jsp?action=list>[회원관리 목록으로]</a></h2>
 <form name=form1 method=post action=manager_control.jsp>
 <input type=hidden name="member_id" value="<%=mb.getMember_id()%>">
 <input type=hidden name="member_pwd" value="<%=mb.getMember_pwd() %>">
@@ -60,6 +78,9 @@
   </tr>
 </table>
 </form>
+<footer>
+	<jsp:include page="../module/bottom.jsp" flush="false"/>
+</footer>
 </div>
 </body>
 </html>

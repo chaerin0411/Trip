@@ -41,7 +41,7 @@
 		<div id="category2_travel">
 		<!-- category2_travel 시작 -->           
 			<div class="items">
-				<a href="index.jsp?CONTENTPAGE=reservation.jsp"><img src="img/osaka.jpg"></a>
+				<a href="reservation/reservation_control.jsp?action=specialSearch&start_port=ICN&end_port=KIX"><img src="img/osaka.jpg"></a>
 				<div class="itemp">
 				<p class="title">서울/인천 - 오사카</p>
 				<p class="comment">일반석 왕복</p>
@@ -49,7 +49,7 @@
 				</div>
 			</div>                    
 			<div class="items">
-				<a href="index.jsp?CONTENTPAGE=reservation.jsp"><img src="img/hongkong.jpg"></a>
+				<a href="reservation/reservation_control.jsp?action=specialSearch&start_port=ICN&end_port=HKG"><img src="img/hongkong.jpg"></a>
 				<div class="itemp">
 					<p class="title">서울/인천 - 홍콩</p>
 					<p class="comment">일반석 왕복</p>
@@ -57,7 +57,7 @@
 				</div>
 			</div>                                       
 			<div class="items">
-				<a href="index.jsp?CONTENTPAGE=reservation.jsp"><img src="img/brazil.jpg"></a>
+				<a href="reservation/reservation_control.jsp?action=specialSearch&start_port=ICN&end_port=GRU"><img src="img/brazil.jpg"></a>
 				<div class="itemp">
 					<p class="title">서울/인천 - 브라질</p>
 					<p class="comment">일반석 왕복</p>
@@ -65,7 +65,7 @@
 				</div>
 			</div>                    
 			<div class="items">
-				<a href="index.jsp?CONTENTPAGE=reservation.jsp"><img src="img/hawaii.jpg"></a>
+				<a href="reservation/reservation_control.jsp?action=specialSearch&start_port=ICN&end_port=HNL"><img src="img/hawaii.jpg"></a>
 				<div class="itemp">
 					<p class="title">서울/인천 - 하와이</p>
 					<p class="comment">일반석 왕복</p>

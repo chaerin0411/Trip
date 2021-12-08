@@ -28,6 +28,7 @@
 	<div id="main" align="center">
 		<h3>좌석 선택</h3>
 		<form name="floor1" method=post action=reservation/reservation_control.jsp>
+			<input type=hidden name="grade" value="<%=rb.getGrade()%>">
 			<input type=hidden name="action" value="seat">
 			<table border="1">
 				<tr>

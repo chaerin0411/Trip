@@ -6,13 +6,7 @@
 <jsp:useBean id="mb" class="memberManagement.ManagementBook" scope="session" />
 <jsp:useBean id="sb" class="reservationManagement.ReservationBook" scope="session"/>
 
-<%
-	String seat = (String)session.getAttribute("seat");
-	String sCheck = (String)session.getAttribute("sCheck");
-	if(sCheck != null) { %>
-		<script>alert("이미 예약된 좌석입니다!");</script>
-	<% }
-%>
+<% String seat = (String)session.getAttribute("seat"); %>
 
 <!DOCTYPE HTML>
 <html>
@@ -70,7 +64,7 @@
 				<tr>
 					<th>좌석</th>
 					<td><a href="index.jsp?CONTENTPAGE=<%= seat %>.jsp">
-						<input type="text" name="seat" placeholder="AA01"
+						<input type="text" name="seat" placeholder="좌석을 선택해주세요"
 							value="<%=rb.getServe_seat_no()%>"></a></td>
 				</tr>
 				<tr>
@@ -79,7 +73,6 @@
 				</tr>
 				<tr>
 					<th>티켓가격</th> <!-- 임시데이터 -->
-					<% rb.setTicket_price(85960); %>
 					<td><input type="text" name="ticket" placeholder="85960"
 						value="<%=rb.getTicket_price()%>"></td>
 				</tr>

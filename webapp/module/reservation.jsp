@@ -1,6 +1,10 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8" pageEncoding="UTF-8"
 	import="java.util.*, reservationManagement.*, memberManagement.*"%>
+
+<jsp:useBean id="rbean" class="reservationManagement.ReservationBean" scope="session" />
+<jsp:useBean id="rb" class="reservationManagement.ReservationBook" scope="session" />
 <jsp:useBean id="sDatas" scope="session" class="java.util.ArrayList" />
+
 <!DOCTYPE HTML>
 <html>
 
@@ -41,10 +45,11 @@
 				<tr>
 					<th>출발지</th>
 					<td><select name="start_port">
+							<option value="<%=rb.getStart_port()%>"><%= rbean.getAirport(rb.getStart_port())%>
 							<option value="BKK">방콕
 							<option value="CDG">파리
 							<option value="CJU">제주
-							<option value="GMP" selected>김포
+							<option value="GMP">김포
 							<option value="GRU">상파울로
 							<option value="HKG">홍콩
 							<option value="HNL">하와이
@@ -60,6 +65,7 @@
 				<tr>
 					<th>도착지</th>
 					<td><select name="end_port">
+							<option value="<%=rb.getEnd_port()%>"><%= rbean.getAirport(rb.getEnd_port())%>
 							<option value="BKK">방콕
 							<option value="CDG">파리
 							<option value="CJU">제주
@@ -73,7 +79,7 @@
 							<option value="LHR">런던
 							<option value="NRT">도쿄
 							<option value="PEK">베이징
-							<option value="PUS" selected>부산
+							<option value="PUS">부산
 					</select></td>
 				</tr>
 				<tr>

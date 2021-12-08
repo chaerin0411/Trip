@@ -28,75 +28,49 @@ function check(reservation_no) {
 			</ul>
 		</nav><!-- navi 끝 -->
 	</header><!-- header 끝 -->
-	
+
 	<div id="main" align="center">
-        	<h3>나의 예약</h3>
-				<input type="button" value="항공">
-                <input type="button" value="숙박"style="background-color: #bbb;">
-               	<input type="button" value="투어·티켓" style="background-color: #bbb;">
-          	
-           <form method=post action="../reservation/reservation_control.jsp">
-           		<input type=hidden name="member_id" value="<%=mb.getMember_id() %>">
-				<input type=hidden name="action" value="edit">
-				<table border="1">
-					<tr>
-						<th>예약번호</th>
-						<th>예약자</th>
-						<th>탑승일</th>
-						<th>출발지</th>
-						<th>도착지</th>
-						<th>탑승인원</th>
-						<th>좌석등급</th>
-						<th>좌석</th>
-						<th>항공사이름</th>
-						<th>출발시간</th>
-						<th>도착시간</th>
-						<th>운임료</th>
-					</tr>
-					
-					<% for(ReservationBook rb : (ArrayList<ReservationBook>)rDatas) {
-					%>
-						<tr>
-							<td><a href="javascript:check(<%=rb.getReservation_no() %>)">
-									<%=rb.getReservation_no() %>
-								</a></td>
-							<td>
-								<%=rb.getMember_id() %>
-							</td>
-							<td>
-								<%=rb.getDate() %>
-							</td>
-							<td>
-								<%=rb.getStart_port() %>
-							</td>
-							<td>
-								<%=rb.getEnd_port() %>
-							</td>
-							<td>
-								<%=rb.getPassenger_number() %>
-							</td>
-							<td>
-								<%=rb.getGrade() %>
-							</td>
-							<td>
-								<%=rb.getSeat() %>
-							</td>
-							<td>
-								<%=rb.getAirplane_no() %>
-							</td>
-							<td>
-								<%=rb.getDeparture_time() %>
-							</td>
-							<td>
-								<%=rb.getArrival_time() %>
-							</td>
-							<td>
-								<%=rb.getFreightfee() %>
-							</td>
-						</tr>
-					<% } %>
-				</table>
-			</form> 	
-		</div>		
+		<h3>나의 예약</h3>
+		<input type="button" value="항공">
+		<input type="button" value="숙박" style="background-color: #bbb;">
+		<input type="button" value="투어·티켓" style="background-color: #bbb;">
+
+		<form method=post action="../reservation/reservation_control.jsp">
+			<input type=hidden name="member_id" value="<%=mb.getMember_id() %>">
+			<input type=hidden name="action" value="edit">
+			<table border="1">
+				<tr>
+					<th>예약번호</th>
+					<th>예약자</th>
+					<th>탑승일</th>
+					<th>출발시간</th>
+					<th>도착시간</th>
+					<th>출발지</th>
+					<th>도착지</th>
+					<th>좌석번호</th>
+					<th>티켓가격</th>
+					<th>항공사번호</th>
+					<th>좌석등급</th>
+				</tr>
+
+				<% for(ReservationBook rb : (ArrayList<ReservationBook>)rDatas) { %>
+				<tr>
+					<td><a href="javascript:check(<%=rb.getReservation_no() %>)">
+						<%=rb.getReservation_no() %></a></td>
+					<td><%=rb.getMember_id() %></td>
+					<td><%=rb.getDate() %></td>
+					<td><%=rb.getDeparture_time() %></td>
+					<td><%=rb.getArrival_time() %></td>
+					<td><%=rb.getStart_port() %></td>
+					<td><%=rb.getEnd_port() %></td>
+					<td><%=rb.getServe_seat_no() %></td>
+					<td><%=rb.getTicket_price() %></td>
+					<td><%=rb.getAirplane_no() %></td>
+					<td><%=rb.getGrade() %></td>
+				</tr>
+				<% } %>
+			</table>
+		</form>
+	</div>
 </body>
 </html>

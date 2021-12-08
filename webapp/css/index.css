@@ -229,7 +229,7 @@ header {
     padding: 7px;
     background-color: rgba(0, 0, 0, 0.5);
 }
-#category2_travel .item:hover .itemp {
+#category2_travel .items:hover .itemp {
     background-color: rgba(255, 255, 255, 0.7);
 }
 #category2_travel .itemp p {
@@ -238,7 +238,7 @@ header {
     text-align: left;
     color: white;
 }
-#category2_travel .item:hover .itemp p {
+#category2_travel .items:hover .itemp p {
     color: black;
 }
 
@@ -257,7 +257,7 @@ header {
     line-height: 38px;
     color: #F1C40F;
 }
-#category2_travel .item:hover .itemp .price {
+#category2_travel .items:hover .itemp .price {
     color: #3e008f;
 }
 

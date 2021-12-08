@@ -7,9 +7,16 @@
 <head>
 <meta charset="UTF-8">
 <title>항공권 예약 사이트 - 여행지 정보</title>
-<link rel="stylesheet" type="text/css" href="css/reservation.css">
+<link rel="stylesheet" href="css/information.css" type="text/css" media="screen" />
 </head>
 <body>
+<%
+	String verified = (String)session.getAttribute("verified");
+	if (verified != null) { %>
+		<script>alert("이미 찜한 상품입니다!");</script><%
+		session.removeAttribute("verified");
+	}
+%>
 <header>
 <!-- header 시작 -->
 	<nav id="navi">
@@ -29,16 +36,19 @@
 	<!-- section category1 시작 -->
 			<h3>국내여행</h3>
 			<ul>
-				<li>가평 양평</li>
-				<li>강릉 속초</li>
+				<li>가평·양평</li>
+				<li>강릉·속초</li>
 				<li>경주</li>
-				<li class="selected">부산</li>
+				<li style="color: rgba(32, 104, 143, 0.5);">부산</li>
 				<li>여수</li>
 				<li>인천</li>
 				<li>전주</li>
 			</ul>
-			<input type="text" value="국내">
-			<input type="text">
+			<select>
+				<option value="국내">국내
+				<option value="해외">해외	
+			</select>
+			<input type="search" placeholder="search">
 	</section> <!-- section category1 끝 -->
 		
 	<section id="category2">
@@ -50,7 +60,7 @@
 		<div id="category2_travel">
 		<!-- category2_travel 시작 -->           
 			<div class="items">
-				<a href="#"><img src="img/bridge.JPG"></a>
+				<a href="cart/cart_control.jsp?action=search&product_no=P001"><img src="img/bridge.JPG"></a>
 				<div class="itemp">
 				<p class="title">광안대교</p>
 				<p class="comment">관광명소 부산 수영구<br>교량, 다리</p>
@@ -58,21 +68,21 @@
 				</div>
 			</div>                    
 			<div class="items">
-				<a href="#"><img src="img/thebay.jpg"></a>
+				<a href="cart/cart_control.jsp?action=search&product_no=P002"><img src="img/thebay.jpg"></a>
 				<div class="itemp">
 				<p class="title">더베이101</p>
 				<p class="comment">관광명소 부산 해운대구<br>문화시설</p>
 				<p class="price">평점 4.8(124)</p>
 				</div>
 			</div>                                       
-			<div class="items">
-				<a href="#"><img src="img/sujung.jpg"></a>
+			<div class="items">	
+				<a href="cart/cart_control.jsp?action=search&product_no=P003"><img src="img/sujung.jpg"></a>
 				<div class="itemp">
 				<p class="title">수정동</p>
 				<p class="comment">관광명소 부산 동구<br>마을</p>
 				<p class="price">평점 4.1(156)</p>
 				</div>
-			</div>                  
+			</div> 
 		</div> <!-- category2_travel 끝 -->
 	</section> <!-- section category2 끝 -->
 	
@@ -85,7 +95,7 @@
 		<div id="category2_travel">
 		<!-- category2_travel 시작 -->           
 			<div class="items">
-				<a href="#"><img src="img/gukbab.png"></a>
+				<a href="cart/cart_control.jsp?action=search&product_no=P004"><img src="img/gukbab.png"></a>
 				<div class="itemp">
 				<p class="title">수변최고돼지국밥</p>
 				<p class="comment">맛집 부산 수영구<br>국밥</p>
@@ -93,7 +103,7 @@
 				</div>
 			</div>                    
 			<div class="items">
-				<a href="#"><img src="img/magnate.png"></a>
+				<a href="cart/cart_control.jsp?action=search&product_no=P005"><img src="img/magnate.png"></a>
 				<div class="itemp">
 				<p class="title">메그네이트</p>
 				<p class="comment">맛집 부산 남구<br>카페</p>
@@ -101,7 +111,7 @@
 				</div>
 			</div>                                       
 			<div class="items">
-				<a href="#"><img src="img/sujung.jpg"></a>
+				<a href="cart/cart_control.jsp?action=search&product_no=P006"><img src="img/pizza.jpg"></a>
 				<div class="itemp">
 				<p class="title">이재모피자</p>
 				<p class="comment">맛집 부산 중구<br>피자</p>

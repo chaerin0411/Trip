@@ -20,7 +20,7 @@ public class ReservationBean {
 	 */
 
 	/* MySQL 연결정보 */
-	String jdbc_driver = "com.mysql.cj.jdbc.Driver";
+	String jdbc_driver = "com.mysql.jdbc.Driver";
 	String jdbc_url = "jdbc:mysql://localhost:3306/tripdb?" + 
 			   		  "useUnicode=true&characterEncoding=utf-8&" + 
 			   		  "serverTimezone=UTC&useSSL=false";
@@ -77,7 +77,7 @@ public class ReservationBean {
 		finally { disconnect(); } return true;
 	}
 
-	// 항공권 예약 정보 조회 메서드
+	// 특정 항공권 예약 정보 조회 메서드
 	public ReservationBook getDB(Integer reservation_no) {
 		connect(); Statement stmt = null;
 		ReservationBook reservationbook = new ReservationBook();
@@ -112,7 +112,43 @@ public class ReservationBean {
 		finally { disconnect(); } return reservationbook;
 	}
 
-	// 항공권 예약 목록 조회 메서드
+	// 전체 항공권 예약 목록 조회 메서드
+	public ArrayList<ReservationBook> getAllDBList() {
+		connect(); Statement stmt = null;
+		ArrayList<ReservationBook> rDatas = new ArrayList<ReservationBook>();
+		String sql = "select a.reservation_no, a.member_id, a.date, a.schedule_no, "+
+					 "b.departure_time, b.arrival_time, b.start_port, b.end_port, "+
+					 "a.serve_seat_no, a.ticket_price, c.airplane_no, d.grade "+
+					 "from reservation a join schedule b join serve_seat c join seat d "+
+					 "where a.schedule_no=b.schedule_no and a.serve_seat_no=c.serve_seat_no "+
+					 "and c.seat_no=d.seat_no and c.airplane_no=d.airplane_no "+
+					 "order by reservation_no;";
+		try {
+			stmt = conn.createStatement();
+			ResultSet rs = stmt.executeQuery(sql);
+			
+			while (rs.next()) {
+				ReservationBook reservationbook = new ReservationBook();
+				reservationbook.setReservation_no(rs.getInt("a.reservation_no"));
+				reservationbook.setMember_id(rs.getString("a.member_id"));
+				reservationbook.setDate(rs.getString("a.date"));
+				reservationbook.setSchedule_no(rs.getString("a.schedule_no"));
+				reservationbook.setDeparture_time(rs.getString("b.departure_time"));
+				reservationbook.setArrival_time(rs.getString("b.arrival_time"));
+				reservationbook.setStart_port(rs.getString("b.start_port"));
+				reservationbook.setEnd_port(rs.getString("b.end_port"));
+				reservationbook.setServe_seat_no(rs.getString("a.serve_seat_no"));
+				reservationbook.setTicket_price(rs.getInt("a.ticket_price"));
+				reservationbook.setAirplane_no(rs.getString("c.airplane_no"));
+				reservationbook.setGrade(rs.getString("d.grade"));
+				rDatas.add(reservationbook);
+			} rs.close();
+		}
+		catch (SQLException e) { e.printStackTrace(); }
+		finally { disconnect(); } return rDatas;
+	}
+	
+	// 특정 회원의 항공권 예약 목록 조회 메서드
 	public ArrayList<ReservationBook> getDBList(String member_id) {
 		connect(); Statement stmt = null;
 		ArrayList<ReservationBook> rDatas = new ArrayList<ReservationBook>();
@@ -149,11 +185,11 @@ public class ReservationBean {
 		finally { disconnect(); } return rDatas;
 	}
 
-	// 항공사 스케줄 목록 조회 메서드
+	// 전체 항공사 스케줄 목록 조회 메서드
 	public ArrayList<ReservationBook> getScheduleList() {
 		connect();
 		ArrayList<ReservationBook> sDatas = new ArrayList<ReservationBook>();
-		String sql = "select * from schedule order by freightfee;";
+		String sql = "select * from schedule order by freightfee asc;";
 		
 		try {
 			pstmt = conn.prepareStatement(sql);
@@ -179,7 +215,7 @@ public class ReservationBean {
 	public ArrayList<ReservationBook> getSchedule(String start_port, String end_port) {
 		connect();
 		ArrayList<ReservationBook> sDatas = new ArrayList<ReservationBook>();
-		String sql = "select * from schedule where start_port=? and end_port=?";
+		String sql = "select * from schedule where start_port=? and end_port=? order by freightfee asc";
 		
 		try {
 			pstmt = conn.prepareStatement(sql);
@@ -262,25 +298,5 @@ public class ReservationBean {
 		}
 		catch (SQLException e) { e.printStackTrace(); }
 		finally { disconnect(); } return airline_name;
-	}
-	
-	// 이미 예약된 좌석인지 확인하는 메서드
-	public boolean chkSeat(String serve_seat_no) {
-		connect(); Statement stmt = null;
-		ReservationBook reservationbook = new ReservationBook();
-		String sql = "select serve_seat_no from reservation "+
-					 "where schedule_no="+reservationbook.getSchedule_no()+";";
-
-		try {
-			stmt = conn.createStatement();
-			ResultSet rs = stmt.executeQuery(sql);
-			
-			while (rs.next()) {
-				if(serve_seat_no.equals(rs.getString("serve_seat_no")))
-					return false;
-			} rs.close();
-		}
-		catch (SQLException e) { e.printStackTrace(); }
-		finally { disconnect(); } return true;
 	}
 }

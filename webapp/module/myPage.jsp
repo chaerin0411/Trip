@@ -7,6 +7,9 @@
 	function sub1(member_id) {
 		document.location.href="reservation/reservation_control.jsp?action=list&member_id="+member_id;
 	}
+	function sub3(member_id) {
+		document.location.href="cart/cart_control.jsp?action=list&member_id="+member_id;
+	}
 	function sub4(member_id) {
 		document.location.href="management/manager_control.jsp?action=infoEdit&member_id="+member_id;
 	}
@@ -14,7 +17,7 @@
 
 <!-- myPage.jsp -->
 <head>
-<link rel="stylesheet" href="css/reservation.css" type="text/css" media="screen" />
+<link rel="stylesheet" href="css/list.css" type="text/css" media="screen" />
 </head>
 <header>
 	<!-- header 시작 -->
@@ -23,7 +26,7 @@
 			<ul>
 				<li><a href="javascript:sub1('<%=mb.getMember_id()%>')">나의 예약</a></li>    	
     			<li><a href="index.jsp?CONTENTPAGE=myReview.jsp">나의 리뷰</a></li>
-    			<li><a href="index.jsp?CONTENTPAGE=myList.jsp">나의 찜목록</a></li>
+    			<li><a href="javascript:sub3('<%=mb.getMember_id()%>')">나의 찜목록</a></li>
     			<li><a href="javascript:sub4('<%=mb.getMember_id()%>')">나의 정보</a></li>
 			</ul>
 		</nav><!-- navi 끝 -->
@@ -33,16 +36,21 @@
 <!-- section main 시작 --> 
 	<section id="category1">
 	<!-- section category1 시작 -->
-		<h3>마이 페이지</h3>
-        <div>
-			<input type="button" value="항공">
-            <input type="button" value="숙박"style="background-color: #bbb;">
-            <input type="button" value="투어·티켓" style="background-color: #bbb;">
-      	</div>
-    </section> <!-- section category1 끝 -->
-	<br>
-
-	<section id="category2">        
+		<div id="search">
+        		<h3>마이 페이지</h3>
+				<input type="button" value="항공" style="background-color: #bbb;">
+            	<input type="button" value="숙박" >
+            	<input type="button" value="투어·티켓" style="background-color: #bbb;"><br>
+            	<select>
+					<option value="카테고리 전체">카테고리 전체
+				</select>
+				<input type="date" placeholder="search"> ~
+				<input type="date" placeholder="search">
+				<input type="search" placeholder="search">
+        	</div>
+      	
+       	<div id="category1_list">
+        <!-- category1_list 시작 -->  
 			<div class="items">
 				<a href="#"><img src="img/ellisia.png"></a>
 				<div class="itemp">
@@ -55,8 +63,8 @@
 						호텔 비지니스, 부산광역시 해운대구 XX로 123<br><br>
 						대표전화: 000-0000-0000
 					</p>
-					<p class="price"></p>
 				</div>
-			</div>     
-			</section>                                 
+			</div>
+		</div> <!-- category1_list 끝 -->
+	</section> <!-- section category1 끝 -->                                
 </section> <!-- section main 끝 -->

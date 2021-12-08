@@ -5,7 +5,7 @@
 <head>
 	<meta charset="UTF-8">
 	<title>myReview.jsp</title>
-	<link rel="stylesheet" href="css/reservation.css" type="text/css" media="screen" />
+	<link rel="stylesheet" href="css/list.css" type="text/css" media="screen" />
 </head>
 <body>
 	<header>
@@ -28,22 +28,23 @@
 		
     	<section id="category1">
         <!-- section category1 시작 -->
-        	<h3>나의 리뷰</h3>
-        <div>
-			<input type="button" value="항공" style="background-color: #bbb;">
-            <input type="button" value="숙박">
-            <input type="button" value="투어·티켓" style="background-color: #bbb;">
-      	</div>
-        </section> <!-- section category1 끝 -->
-        <br>
-
-        <section id="category2">
-        <!-- section category2 시작 -->
-                <h3>2021.09.27</h3>
-            <div id="category2_travel">
-                <!-- category2_travel 시작 -->          
+        	<div id="search">
+        		<h3>나의 리뷰</h3>
+				<input type="button" value="관광명소" style="background-color: #bbb;">
+            	<input type="button" value="맛집"><br>
+            	<select>
+					<option value="카테고리 전체">카테고리 전체
+				</select>
+				<input type="date" placeholder="search"> ~
+				<input type="date" placeholder="search">
+				<input type="search" placeholder="search">
+        	</div>
+  
+ 			<h3>2021.09.27</h3><br>
+            <div id="category1_list">
+                <!-- category1_list 시작 -->          
                 <div class="items">
-                    <a href="#"><img src="img/osaka.jpg"></a>
+                    <a href="#"><img src="img/ellisia.png"></a>
                     <div class="itemp">
                         <p class="title">엘리시아</p>
                         <p class="comment">
@@ -52,13 +53,14 @@
                         	자차<br>
                         	체크인 15:00 ~ 체크아웃 11:00<br>
                         	호텔 · 비지니스, 부산광역시 해운대구 XX로 123<br><br>
-                        	대표전화: 000-0000-0000
+                        	대표전화: 000-0000-0000<br><br>
+                        	리뷰 내용<br>
+                        	방도 넓고 깨끗하고 직원들도 친절하고<br> 사랑하는 사람들이랑 좋은 시간 보내다왔어요 ㅎㅎ           	
                        	</p>
-                        <p class="price"></p>
                     </div>
-                </div>                                      
-            </div> <!-- category2_travel 끝 -->
-        </section> <!-- section category2 끝 -->
+                </div>                                 
+            </div> <!-- category1_list 끝 -->
+        </section> <!-- section category1 끝 -->
     </section> <!-- section main 끝 -->
 </body>
 </html>
