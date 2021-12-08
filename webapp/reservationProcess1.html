@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<link rel="stylesheet" href="css/index.css" type="text/css" media="screen" />
+	<link rel="stylesheet" href="css/formreserve.css" type="text/css" media="screen" />
+	<script type="text/javascript">
+	function select(schedule_no) { 
+		document.location.href = 
+			"reservation/reservation_control.jsp?action=ssearch&schedule_no="+schedule_no;
+	}
+	</script>
+</head>
+
+<!-- reservationProcess1.jsp -->
+<body>
+<header><!-- header 시작 -->
+	<nav id="navi"><!-- navi 시작 -->
+		<ul>
+			<li><a href="index.jsp?CONTENTPAGE=content.jsp">
+				<img src="img/home.png"></a></li>
+			<li>&#5171;</li>
+			<li><a href="index.jsp?CONTENTPAGE=reservation.jsp">항공권 예약</a></li>
+		</ul>
+	</nav><!-- navi 끝 -->
+</header><!-- header 끝 -->
+
+<!-- section main 시작 -->
+<section id="main">
+	<form name=reservation method=post
+		action=reservation/reservation_control.jsp>
+		<input type=hidden name="action" value="ssearch">
+		
+		<!-- 선택 시작 -->
+		<div id="selop">
+			<h3>항공사별 가격비교</h3>
+			<select name="order">
+				<option value="lowPrice">가격낮은순
+				<option value="highPrice">가격높은순
+				<option value="fastDeparture">출발시간빠른순
+				<option value="lowDeparture">출발시간느린순
+			</select>
+		</div>
+
+		<table>
+			<tr>
+				<th>일정번호</th>
+				<th>항공사</th>
+				<th>출발시간</th>
+				<th>도착시간</th>
+				<th>출발지</th>
+				<th>도착지</th>
+				<th>운임료</th>
+			</tr>
+			<tr>
+				<td class="ths"><a href="javascript:select('<%=sb.getSchedule_no() %>')">
+					120840831515</a></td>
+				<td>TW</td>
+				<td>08:45</td>
+				<td>09:15</td>
+				<td>GMP</td>
+				<td>PUS</td>
+				<td>33320</td>
+			</tr>
+		</table><!-- 선택 끝 -->
+	</form>
+</section><!-- section main 끝 -->
+</body>
+</html>

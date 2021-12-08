@@ -7,7 +7,7 @@ package cartManagement;
  */
 
 public class CartBook { // 멤버변수 선언
-	
+
 	// product
 	private String product_no;
 	private String product_name;
@@ -19,11 +19,11 @@ public class CartBook { // 멤버변수 선언
 	private String tel;
 	private String distinguishing;
 	private String src;
-	
+
 	// cart
 	private Integer cart_no;
 	private String member_id;
-	
+
 	// product
 	public String getProduct_no() { return product_no; }
 	public void setProduct_no(String product_no) {
@@ -33,7 +33,7 @@ public class CartBook { // 멤버변수 선언
 	public void setProduct_name(String product_name) {
 		this.product_name = product_name;
 	}
-	public String getLocation() { return location;}
+	public String getLocation() { return location; }
 	public void setLocation(String location) {
 		this.location = location;
 	}
@@ -52,20 +52,14 @@ public class CartBook { // 멤버변수 선언
 	public String getDistinguishing() { return distinguishing; }
 	public void setDistinguishing(String distinguishing) {
 		this.distinguishing = distinguishing;
-	}	
+	}
 	public String getTime() { return time; }
-	public void setTime(String time) {
-		this.time = time;
-	}
+	public void setTime(String time) { this.time = time; }
 	public String getTel() { return tel; }
-	public void setTel(String tel) {
-		this.tel = tel;
-	}
+	public void setTel(String tel) { this.tel = tel; }
 	public String getSrc() { return src; }
-	public void setSrc(String src) {
-		this.src = src;
-	}
-	
+	public void setSrc(String src) { this.src = src; }
+
 	// cart
 	public Integer getCart_no() { return cart_no; }
 	public void setCart_no(Integer cart_no) {
@@ -74,5 +68,5 @@ public class CartBook { // 멤버변수 선언
 	public String getMember_id() { return member_id; }
 	public void setMember_id(String member_id) {
 		this.member_id = member_id;
-	}	
+	}
 }

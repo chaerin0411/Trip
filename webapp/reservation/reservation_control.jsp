@@ -88,6 +88,46 @@
 		response.sendRedirect("../index.jsp?CONTENTPAGE=reservationProcess1.jsp");
 	}
 	
+	// 특정 도시 항공권 검색 요청인 경우 - 가격낮은순
+	else if(action.equals("lowPrice")) {
+		ArrayList<ReservationBook> sDatas = rbean.getSchedulePA(rb.getStart_port(), rb.getEnd_port());
+		session.setAttribute("sDatas", sDatas);
+		session.setAttribute("seat", request.getParameter("grade"));
+		rb.setGrade(request.getParameter("grade"));
+		request.setAttribute("selop", "pa");
+		response.sendRedirect("../index.jsp?CONTENTPAGE=reservationProcess1.jsp");
+	}
+	
+	// 특정 도시 항공권 검색 요청인 경우 - 가격높은순
+	else if(action.equals("highPrice")) {
+		ArrayList<ReservationBook> sDatas = rbean.getSchedulePD(rb.getStart_port(), rb.getEnd_port());
+		session.setAttribute("sDatas", sDatas);
+		session.setAttribute("seat", request.getParameter("grade"));
+		rb.setGrade(request.getParameter("grade"));
+		request.setAttribute("selop", "pd");
+		response.sendRedirect("../index.jsp?CONTENTPAGE=reservationProcess1.jsp");
+	}
+	
+	// 특정 도시 항공권 검색 요청인 경우 - 출발시간 빠른순
+	else if(action.equals("fastDeparture")) {
+		ArrayList<ReservationBook> sDatas = rbean.getScheduleDA(rb.getStart_port(), rb.getEnd_port());
+		session.setAttribute("sDatas", sDatas);
+		session.setAttribute("seat", request.getParameter("grade"));
+		rb.setGrade(request.getParameter("grade"));
+		request.setAttribute("selop", "da");
+		response.sendRedirect("../index.jsp?CONTENTPAGE=reservationProcess1.jsp");
+	}
+	
+	// 특정 도시 항공권 검색 요청인 경우 - 출발시간 느린순
+	else if(action.equals("lowDeparture")) {
+		ArrayList<ReservationBook> sDatas = rbean.getScheduleDD(rb.getStart_port(), rb.getEnd_port());
+		session.setAttribute("sDatas", sDatas);
+		session.setAttribute("seat", request.getParameter("grade"));
+		rb.setGrade(request.getParameter("grade"));
+		request.setAttribute("selop", "dd");
+		response.sendRedirect("../index.jsp?CONTENTPAGE=reservationProcess1.jsp");
+	}
+	
 	// 특정 특가 도시 항공권 검색 요청인 경우
 	else if(action.equals("specialSearch")) {
 		rb.setStart_port(request.getParameter("start_port"));

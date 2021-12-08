@@ -17,17 +17,9 @@
 	}
 %>
 <!-- header 시작 -->
-<section id="top">
 <!-- section top 시작 -->
+<section id="top">
 	<a id="logo" href="index.jsp"><img id="logo_img" src="img/logo.png"></a>
-	<nav id="top_menu">
-		<ul>
-			<li><%= memberStr %></li>
-			<li class="bdright"><a href="<%= linkStr %>"><%= loginStr %></a></li>
-			<li><a href="index.jsp?CONTENTPAGE=joinForm.jsp">회원가입</a></li>
-			<li id="member"><a href="reservation/reservation_control.jsp?action=myPage"><img id="member_img" src="img/member.png"></a></li>
-		</ul>
-	</nav>
 	<nav id="main_menu">
 		<ul>
 			<li><a href="index.jsp">메인</a></li>
@@ -36,5 +28,13 @@
 			<li><a href="reservation/reservation_control.jsp?action=myPage">마이페이지</a></li>
 		</ul>
 	</nav>
-</section> <!-- section top 끝 -->
+	<nav id="top_menu">
+		<ul>
+			<li><%= memberStr %></li>
+			<li class="bdright"><a href="<%= linkStr %>"><%= loginStr %></a></li>
+			<li><a href="index.jsp?CONTENTPAGE=joinForm.jsp">회원가입</a></li>
+			<li id="member"><a href="reservation/reservation_control.jsp?action=myPage"><img id="member_img" src="img/member.png"></a></li>
+		</ul>
+	</nav>
+</section><!-- section top 끝 -->
 <!-- header 끝 -->

@@ -27,11 +27,8 @@ fieldset {
     padding-right: 10px;
     color: #888888;
 }
-#navi li a:hover {
-    color: black;
-}
+#navi li a:hover { color: black; }
 #navi img { width: 20px; }
-
 
 #main {
     text-align: center;

@@ -176,6 +176,7 @@ header {
     background-color: #F9F9F9;
     border: 2px solid #F5F5F5;
     margin: 0 10px;
+    cursor: pointer;
 }
 #category1_menu li b { font-size: 30px; }
 #category1_menu li:hover a { color: white; }

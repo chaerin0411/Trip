@@ -1,13 +1,7 @@
-<%@ page language="java" contentType="text/html; charset=UTF-8" pageEncoding="UTF-8"
-	import="java.util.*, reservationManagement.*, memberManagement.*"%>
-<% String seat = (String)session.getAttribute("seat"); %>
-
-<jsp:useBean id="rbean" class="reservationManagement.ReservationBean" scope="session" />
-<jsp:useBean id="rb" class="reservationManagement.ReservationBook" scope="session" />
-<jsp:useBean id="mb" class="memberManagement.ManagementBook" scope="session" />
-<jsp:useBean id="sb" class="reservationManagement.ReservationBook" scope="session"/>
-
+<!DOCTYPE html>
+<html lang="en">
 <head>
+	<link rel="stylesheet" href="css/index.css" type="text/css" media="screen" />
 	<link rel="stylesheet" href="css/formreserve.css" type="text/css" media="screen" />
 	<script type="text/javascript">
 		function select(schedule_no) {
@@ -33,7 +27,7 @@
 	<h3>항공편</h3>
 	<form name=reservation method=post
 		action=reservation/reservation_control.jsp>
-		<input type=hidden name="member_id" value="<%= mb.getMember_id() %>">
+		<input type=hidden name="member_id" value="<%=mb.getMember_id()%>">
 		<input type=hidden name="action" value="insert">
 		
 		<!-- 선택 시작 -->
@@ -48,13 +42,13 @@
 				<th>운임료</th>
 			</tr>
 			<tr>
-				<td><%= sb.getSchedule_no() %></td>
-				<td><%= sb.getAirplane_no()%></td>
-				<td><%= sb.getDeparture_time() %></td>
-				<td><%= sb.getArrival_time() %></td>
-				<td><%= sb.getStart_port() %></td>
-				<td><%= sb.getEnd_port() %></td>
-				<td><%= sb.getFreightfee() %></td>
+				<td><%=sb.getSchedule_no()%></td>
+				<td><%=sb.getAirplane_no()%></td>
+				<td><%=sb.getDeparture_time()%></td>
+				<td><%=sb.getArrival_time()%></td>
+				<td><%=sb.getStart_port()%></td>
+				<td><%=sb.getEnd_port()%></td>
+				<td><%=sb.getFreightfee()%></td>
 			</tr>
 		</table>
 
@@ -64,17 +58,17 @@
 				<th>좌석</th>
 				<td><a href="index.jsp?CONTENTPAGE=<%= seat %>.jsp">
 				<input type="text" name="seat" placeholder="좌석을 선택해주세요"
-					value="<%= rb.getServe_seat_no() %>"></a></td>
+					value="<%=rb.getServe_seat_no()%>"></a></td>
 			</tr>
 			<tr>
 				<th>좌석등급</th>
-				<td style="text-transform: uppercase;"><%= rb.getGrade() %></td>
+				<td style="text-transform: uppercase;"><%=rb.getGrade()%></td>
 			</tr>
 			<tr>
 				<th>티켓가격</th>
 				<!-- 임시데이터 -->
 				<td><input type="text" name="ticket" placeholder="85960"
-					value="<%= rb.getTicket_price() %>"></td>
+					value="<%=rb.getTicket_price()%>"></td>
 			</tr>
 		</table>
 
@@ -82,7 +76,7 @@
 		<table>
 			<tr>
 				<th>날짜</th>
-				<td><%= rb.getDate() %></td>
+				<td><%=rb.getDate()%></td>
 			</tr>
 			<tr>
 				<th>출발지</th>
@@ -96,7 +90,7 @@
 			</tr>
 			<tr>
 				<th>탑승인원</th>
-				<td><%= rb.getPassenger_number() %></td>
+				<td><%=rb.getPassenger_number()%></td>
 			</tr>
 			<tr>
 			<tr>
@@ -111,3 +105,4 @@
 	</form>
 </section><!-- section main 끝 -->
 </body>
+</html>

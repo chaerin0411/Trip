@@ -3,7 +3,7 @@ $(function() {
     var btns = $('.button')
     var prev = $('.prev')
     var next = $('.next')
-    var currentTab = $(this).attr("id")
+    var currentTab = 1
 
     prev.click(function() {
         if(currentTab != 1) {

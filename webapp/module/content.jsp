@@ -1,12 +1,10 @@
-<%@ page language="java" contentType="text/html; charset=UTF-8"
-    pageEncoding="UTF-8"%>
+<%@ page language="java" contentType="text/html; charset=UTF-8" pageEncoding="UTF-8"%>
 
 <!-- content.jsp -->
-
-<section id="main">
 <!-- section main 시작 -->
-	<section id="category1">
+<section id="main">
 	<!-- section category1 시작 -->
+	<section id="category1">
 		<div id="category1_carousel">
 			<div class="window">
 				<ul class="container">
@@ -32,14 +30,14 @@
 				<li><a href="index.jsp?CONTENTPAGE=reservation.jsp"><b>&#9992;</b> 항공권 현황</a></li>
 			</ul>
 		</div>
-	</section> <!-- section category1 끝 -->
+	</section><!-- section category1 끝 -->
 	<br>
 
-	<section id="category2">
 	<!-- section category2 시작 -->
+	<section id="category2">
 		<div id="category2_title"><h3>여행지 추천</h3></div>
-		<div id="category2_travel">
-		<!-- category2_travel 시작 -->           
+		<!-- category2_travel 시작 -->    
+		<div id="category2_travel">       
 			<div class="items">
 				<a href="reservation/reservation_control.jsp?action=specialSearch&start_port=ICN&end_port=KIX"><img src="img/osaka.jpg"></a>
 				<div class="itemp">
@@ -72,8 +70,9 @@
 					<p class="price">KRW 700,000원 ~</p>
 				</div>
 			</div>                    
-		</div> <!-- category2_travel 끝 -->
-
+		</div><!-- category2_travel 끝 -->
+		
+		<!--  category2_travel_img 시작 -->
 		<div id="category2_travel_img">
 			<div id="category2_travel_imgcmt">
 				<p><b>여행의 모든 것</b></p>
@@ -84,6 +83,6 @@
 				<p>검색 지옥에서 해방될 시간</p>
 			</div>
 			<img src="img/triple.png">
-		</div>
-	</section> <!-- section category2 끝 -->
-</section> <!-- section main 끝 -->
+		</div><!--  category2_travel_img 끝 -->
+	</section><!-- section category2 끝 -->
+</section><!-- section main 끝 -->

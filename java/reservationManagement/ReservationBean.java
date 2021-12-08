@@ -20,7 +20,7 @@ public class ReservationBean {
 	 */
 
 	/* MySQL 연결정보 */
-	String jdbc_driver = "com.mysql.jdbc.Driver";
+	String jdbc_driver = "com.mysql.cj.jdbc.Driver";
 	String jdbc_url = "jdbc:mysql://localhost:3306/tripdb?" + 
 			   		  "useUnicode=true&characterEncoding=utf-8&" + 
 			   		  "serverTimezone=UTC&useSSL=false";
@@ -216,6 +216,118 @@ public class ReservationBean {
 		connect();
 		ArrayList<ReservationBook> sDatas = new ArrayList<ReservationBook>();
 		String sql = "select * from schedule where start_port=? and end_port=? order by freightfee asc";
+		
+		try {
+			pstmt = conn.prepareStatement(sql);
+			pstmt.setString(1, start_port);
+			pstmt.setString(2, end_port);
+			ResultSet rs = pstmt.executeQuery();
+			
+			while (rs.next()) {
+				ReservationBook reservationbook = new ReservationBook();
+				reservationbook.setSchedule_no(rs.getString("schedule_no"));
+				reservationbook.setDeparture_time(rs.getString("departure_time"));
+				reservationbook.setArrival_time(rs.getString("arrival_time"));
+				reservationbook.setStart_port(rs.getString("start_port"));
+				reservationbook.setEnd_port(rs.getString("end_port"));
+				reservationbook.setAirplane_no(rs.getString("airplane_no"));
+				reservationbook.setFreightfee(rs.getInt("freightfee"));
+				sDatas.add(reservationbook);
+			} rs.close();
+		}
+		catch (SQLException e) { e.printStackTrace(); }
+		finally { disconnect(); } return sDatas;
+	}
+
+	// 특정 도시 항공사 스케줄 가져오는 메서드 - 가격낮은순
+	public ArrayList<ReservationBook> getSchedulePA(String start_port, String end_port) {
+		connect();
+		ArrayList<ReservationBook> sDatas = new ArrayList<ReservationBook>();
+		String sql = "select * from schedule where start_port=? and end_port=? order by freightfee asc";
+		
+		try {
+			pstmt = conn.prepareStatement(sql);
+			pstmt.setString(1, start_port);
+			pstmt.setString(2, end_port);
+			ResultSet rs = pstmt.executeQuery();
+			
+			while (rs.next()) {
+				ReservationBook reservationbook = new ReservationBook();
+				reservationbook.setSchedule_no(rs.getString("schedule_no"));
+				reservationbook.setDeparture_time(rs.getString("departure_time"));
+				reservationbook.setArrival_time(rs.getString("arrival_time"));
+				reservationbook.setStart_port(rs.getString("start_port"));
+				reservationbook.setEnd_port(rs.getString("end_port"));
+				reservationbook.setAirplane_no(rs.getString("airplane_no"));
+				reservationbook.setFreightfee(rs.getInt("freightfee"));
+				sDatas.add(reservationbook);
+			} rs.close();
+		}
+		catch (SQLException e) { e.printStackTrace(); }
+		finally { disconnect(); } return sDatas;
+	}
+
+	// 특정 도시 항공사 스케줄 가져오는 메서드 - 가격높은순
+	public ArrayList<ReservationBook> getSchedulePD(String start_port, String end_port) {
+		connect();
+		ArrayList<ReservationBook> sDatas = new ArrayList<ReservationBook>();
+		String sql = "select * from schedule where start_port=? and end_port=? order by freightfee desc";
+		
+		try {
+			pstmt = conn.prepareStatement(sql);
+			pstmt.setString(1, start_port);
+			pstmt.setString(2, end_port);
+			ResultSet rs = pstmt.executeQuery();
+			
+			while (rs.next()) {
+				ReservationBook reservationbook = new ReservationBook();
+				reservationbook.setSchedule_no(rs.getString("schedule_no"));
+				reservationbook.setDeparture_time(rs.getString("departure_time"));
+				reservationbook.setArrival_time(rs.getString("arrival_time"));
+				reservationbook.setStart_port(rs.getString("start_port"));
+				reservationbook.setEnd_port(rs.getString("end_port"));
+				reservationbook.setAirplane_no(rs.getString("airplane_no"));
+				reservationbook.setFreightfee(rs.getInt("freightfee"));
+				sDatas.add(reservationbook);
+			} rs.close();
+		}
+		catch (SQLException e) { e.printStackTrace(); }
+		finally { disconnect(); } return sDatas;
+	}
+
+	// 특정 도시 항공사 스케줄 가져오는 메서드 - 출발시간 빠른순
+	public ArrayList<ReservationBook> getScheduleDA(String start_port, String end_port) {
+		connect();
+		ArrayList<ReservationBook> sDatas = new ArrayList<ReservationBook>();
+		String sql = "select * from schedule where start_port=? and end_port=? order by departure_time asc";
+		
+		try {
+			pstmt = conn.prepareStatement(sql);
+			pstmt.setString(1, start_port);
+			pstmt.setString(2, end_port);
+			ResultSet rs = pstmt.executeQuery();
+			
+			while (rs.next()) {
+				ReservationBook reservationbook = new ReservationBook();
+				reservationbook.setSchedule_no(rs.getString("schedule_no"));
+				reservationbook.setDeparture_time(rs.getString("departure_time"));
+				reservationbook.setArrival_time(rs.getString("arrival_time"));
+				reservationbook.setStart_port(rs.getString("start_port"));
+				reservationbook.setEnd_port(rs.getString("end_port"));
+				reservationbook.setAirplane_no(rs.getString("airplane_no"));
+				reservationbook.setFreightfee(rs.getInt("freightfee"));
+				sDatas.add(reservationbook);
+			} rs.close();
+		}
+		catch (SQLException e) { e.printStackTrace(); }
+		finally { disconnect(); } return sDatas;
+	}
+
+	// 특정 도시 항공사 스케줄 가져오는 메서드 - 출발시간 느린순
+	public ArrayList<ReservationBook> getScheduleDD(String start_port, String end_port) {
+		connect();
+		ArrayList<ReservationBook> sDatas = new ArrayList<ReservationBook>();
+		String sql = "select * from schedule where start_port=? and end_port=? order by departure_time desc";
 		
 		try {
 			pstmt = conn.prepareStatement(sql);

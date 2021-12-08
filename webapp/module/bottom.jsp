@@ -1,11 +1,11 @@
-<%@ page language="java" contentType="text/html; charset=UTF-8"
-    pageEncoding="UTF-8"%>
+<%@ page language="java" contentType="text/html; charset=UTF-8" pageEncoding="UTF-8"%>
 
 <!-- footer 시작 -->
-<section id="footer_menu_box">
 <!-- section footer_menu_box 시작 -->
-	<nav id="footer_menu">
+<section id="footer_menu_box">
+
 	<!-- footer_menu 시작 -->
+	<nav id="footer_menu">
 		<ul>
 			<li class="footer_title">회사소개</li>
 			<li><a href="#">TRIP에 대하여</a></li>
@@ -40,11 +40,11 @@
 			<li><a href="#">관련 사이트</a></li>
 			<li><a href="#">사이트맵</a></li>
 		</ul>
-	</nav> <!-- footer_menu 끝 -->
-</section> <!-- section footer_menu_box 끝 -->
+	</nav><!-- footer_menu 끝 -->
+</section><!-- section footer_menu_box 끝 -->
 
+<!-- section menu_box 시작 -->
 <section id="menu_box">
-<!-- section footer_box 시작 -->
 	<div id="left_menu_box">
 		<div id="left_menu_box_top">
 			<ul>
@@ -69,5 +69,5 @@
 			<li>주소: 경기도 파주시 광탕면 분수리 47306</li>
 		</ul>
 	</div>
-</section> <!-- section footer_box 끝 -->
+</section><!-- section menu_box 끝 -->
 <!-- footer 끝 -->
