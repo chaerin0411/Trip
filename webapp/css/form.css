@@ -29,3 +29,28 @@ fieldset {
 }
 #navi li a:hover { color: black; }
 #navi img { width: 20px; }
+
+#left {
+    float: left;
+    color: lightgray;
+    font-size: 15px;
+    font-weight: bold;
+    width: 100px;
+    height: 500px;
+    padding-right: 35px;
+    margin-top: 40px;
+    border-right: 2px solid gray;
+}
+#left li {
+    display: block;
+    text-align: right;
+    color: #888888;
+    padding: 3px 0;
+}
+#left li:hover { color: black; }
+#left hr {
+    text-align: center;
+    width: 50px;
+    margin: 20px auto;
+    margin-left: 35px;
+}

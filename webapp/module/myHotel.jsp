@@ -2,7 +2,9 @@
 <jsp:useBean id="mb" class="memberManagement.ManagementBook" scope="session"/>
 
 <head>
+	<link rel="stylesheet" href="css/index.css" type="text/css" media="screen" />
 	<link rel="stylesheet" href="css/form.css" type="text/css" media="screen" />
+	<link rel="stylesheet" href="css/reserve.css" type="text/css" media="screen" />
 	<link rel="stylesheet" href="css/my.css" type="text/css" media="screen" />
 </head>
 
@@ -14,6 +16,8 @@
 			<li><a href="index.jsp?CONTENTPAGE=content.jsp">
 				<img src="img/home.png"></a></li>
 			<li>&#5171;</li>
+			<li><a href="index.jsp?CONTENTPAGE=myFlight.jsp">마이 페이지</a></li>
+			<li>&#5171;</li>
 			<li><a href="index.jsp?CONTENTPAGE=myHotel.jsp">나의 예약 - 숙박</a></li>
 		</ul>
 	</nav><!-- navi 끝 -->
@@ -22,27 +26,33 @@
 
 <!-- section main 시작 --> 
 <section id="main">
-	<!-- section category1 시작 -->
-	<section id="category1">
+	<!-- section category 시작 -->
+	<section id="category">
+		<h3>나의 예약</h3>
+		<input type="button" value="항공">
+        <input class="selected" type="button" value="숙박" >
+        <input type="button" value="투어·티켓"><br>
+
 		<div id="search">
-        		<h3>마이 페이지</h3>
-				<input type="button" value="항공" style="background-color: #bbb;">
-            	<input type="button" value="숙박" >
-            	<input type="button" value="투어·티켓" style="background-color: #bbb;"><br>
-            	<select><option value="카테고리 전체">카테고리 전체</select>
-				<input type="date" placeholder="search"> ~
-				<input type="date" placeholder="search">
-				<input type="search" placeholder="search">
-        	</div>
+            <select><option value="카테고리 전체">카테고리 전체</select>
+			<input type="date" placeholder="search"> ~
+			<input type="date" placeholder="search">
+			<input type="search" placeholder="search">
+        </div>
       	
-        <!-- category1_list 시작 -->
-       	<div id="category1_list">
+        <!-- category_list 시작 -->
+       	<div id="category_list">
 			<div class="items">
-				<a href="#"><img src="img/ellisia.png"></a>
+				<div class="ihead">
+					<h3>2021.09.27(월)</h3>
+					<a href="#">상세보기 》</a>
+				</div>
+				<div class="idetail">숙소 예약번호: 210927123454732891029</div>
+				<img src="img/ellisia.png">
 				<div class="itemp">
 					<p class="title">엘리시아</p>
 					<p class="comment">
-						룸B 402호<br>
+						<b>룸B 402호</b><br>
 						2021.10.08(금) ~ 2021.10.09(토), 1박<br>
 						자차<br>
 						체크인 15:00 ~ 체크아웃 11:00<br>
@@ -50,8 +60,12 @@
 						대표전화: 000-0000-0000
 					</p>
 				</div>
+				<div class="ibtn">
+					<input type="submit" value="취소 요청">
+					<input type="submit" value="이용 정보">
+				</div>
 			</div>
-		</div><!-- category1_list 끝 -->
-	</section><!-- section category1 끝 -->                                
+		</div><!-- category_list 끝 -->
+	</section><!-- section category 끝 -->
 </section><!-- section main 끝 -->
 </body>

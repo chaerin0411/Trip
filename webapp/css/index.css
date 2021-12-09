@@ -217,9 +217,7 @@ header {
     padding: 5px;
     border: 2px solid #98B5DA;
 }
-#category2_travel .items img {
-    width: 220px;
-}
+#category2_travel .items img { width: 220px; }
 
 #category2_travel .itemp {
     z-index: 1;
@@ -239,9 +237,7 @@ header {
     text-align: left;
     color: white;
 }
-#category2_travel .items:hover .itemp p {
-    color: black;
-}
+#category2_travel .items:hover .itemp p { color: black; }
 
 #category2_travel .itemp .title {
     font-size: 18px;
@@ -258,9 +254,7 @@ header {
     line-height: 38px;
     color: #F1C40F;
 }
-#category2_travel .items:hover .itemp .price {
-    color: #3e008f;
-}
+#category2_travel .items:hover .itemp .price { color: #3e008f; }
 
 #category2_travel_img {
     width: 1000px;
@@ -282,12 +276,8 @@ header {
     font-weight: normal;
     line-height: 33px;
 }
-#category2_travel_imgcmt .firstp {
-    margin-top: 5px;
-}
-#category2_travel_img img {
-    width: 750px;
-}
+#category2_travel_imgcmt .firstp { margin-top: 5px; }
+#category2_travel_img img { width: 750px; }
 
 footer { margin-top: 80px; }
 #footer_menu_box {
