@@ -66,13 +66,13 @@
 		else if(action.equals("infoEdit")) {
 			ManagementBook mbook = mbean.getDB(mb.getMember_id());
 			session.setAttribute("mb",mbook);
-			response.sendRedirect("../index.jsp?CONTENTPAGE=myInformation.jsp");
+			response.sendRedirect("../index.jsp?CONTENTPAGE=myInfo.jsp");
 	}
 	
 	// 회원정보 수정 등록 요청인 경우
 		else if(action.equals("infoUpdate")) {
 			if(mbean.updateDB(mb)) {
-				response.sendRedirect("../index.jsp?CONTENTPAGE=myPage.jsp");
+				response.sendRedirect("../index.jsp?CONTENTPAGE=myFlight.jsp");
 			} else throw new Exception("DB 갱신오류");
 		}
 	

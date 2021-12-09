@@ -25,7 +25,7 @@
 	else if(action.equals("list")) {
 		ArrayList<ReservationBook> rDatas = rbean.getDBList(mb.getMember_id());
 		session.setAttribute("rDatas", rDatas);
-		response.sendRedirect("../index.jsp?CONTENTPAGE=myReservation.jsp");
+		response.sendRedirect("../index.jsp?CONTENTPAGE=myFlight.jsp");
 	}
 	
 	// 항공권 좌석 예약 요청인 경우
@@ -149,7 +149,7 @@
 			response.sendRedirect("../index.jsp?CONTENTPAGE=loginForm.jsp");
 		}
 		else { // 로그인 되어있음
-			response.sendRedirect("../index.jsp?CONTENTPAGE=myPage.jsp");
+			response.sendRedirect("../index.jsp?CONTENTPAGE=myFlight.jsp");
 		}
 	}
 	else out.println("<script>alert('action 파라미터를 확인해 주세요!')</script>");
