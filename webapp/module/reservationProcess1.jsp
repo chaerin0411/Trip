@@ -12,11 +12,12 @@
 <jsp:useBean id="sDatas" scope="session" class="java.util.ArrayList" />
 
 <head>
-	<link rel="stylesheet" href="css/formreserve.css" type="text/css" media="screen" />
+	<link rel="stylesheet" href="css/form.css" type="text/css" media="screen" />
+	<link rel="stylesheet" href="css/reserve.css" type="text/css" media="screen" />
 	<script type="text/javascript">
-		function select(schedule_no) { 
+		function select(schedule_no) {
 			document.location.href = 
-				"reservation/reservation_control.jsp?action=ssearch&SCHEDULE_NO="+schedule_no;
+				"reservation/reservation_control.jsp?action=ssearch&schedule_no="+schedule_no;
 		}
 	</script>
 </head>

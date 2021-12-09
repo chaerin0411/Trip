@@ -6,15 +6,8 @@
 <jsp:useBean id="rb" class="reservationManagement.ReservationBook" scope="session" />
 <jsp:useBean id="mb" class="memberManagement.ManagementBook" scope="session" />
 <jsp:useBean id="sb" class="reservationManagement.ReservationBook" scope="session"/>
-
-<head>
-	<link rel="stylesheet" href="css/formreserve.css" type="text/css" media="screen" />
-	<script type="text/javascript">
-		function select(schedule_no) {
-			document.location.href = "reservation/reservation_control.jsp?action=ssearch&schedule_no="+schedule_no;
-		}
-	</script>
-</head>
+<head><link rel="stylesheet" href="css/form.css" type="text/css" media="screen" />
+<link rel="stylesheet" href="css/reserve.css" type="text/css" media="screen" /></head>
 
 <!-- reservationProcess2.jsp -->
 <body>
@@ -30,7 +23,7 @@
 </header><!-- header 끝 -->
 
 <section id="main"><!-- section main 시작 -->
-	<h3>항공편</h3>
+	<h4>항공편</h4>
 	<form name=reservation method=post
 		action=reservation/reservation_control.jsp>
 		<input type=hidden name="member_id" value="<%= mb.getMember_id() %>">
@@ -58,13 +51,13 @@
 			</tr>
 		</table>
 
-		<h3>좌석 선택</h3>
-		<table>
+		<h4>좌석 선택</h4>
+		<table id="tblseat">
 			<tr>
 				<th>좌석</th>
 				<td><a href="index.jsp?CONTENTPAGE=<%= seat %>.jsp">
 				<input type="text" name="seat" placeholder="좌석을 선택해주세요"
-					value="<%= rb.getServe_seat_no() %>"></a></td>
+					value="<%= (rb.getServe_seat_no() == null) ? "AA01" : rb.getServe_seat_no() %>"></a></td>
 			</tr>
 			<tr>
 				<th>좌석등급</th>
@@ -72,14 +65,13 @@
 			</tr>
 			<tr>
 				<th>티켓가격</th>
-				<!-- 임시데이터 -->
 				<td><input type="text" name="ticket" placeholder="85960"
-					value="<%= rb.getTicket_price() %>"></td>
+					value="<%= (rb.getTicket_price() == null) ? "운임료: 자동설정" : rb.getTicket_price() %>"></td>
 			</tr>
 		</table>
 
-		<h3>항공권 예약 확인</h3>
-		<table>
+		<h4>항공권 예약 확인</h4>
+		<table id="tblchk">
 			<tr>
 				<th>날짜</th>
 				<td><%= rb.getDate() %></td>
@@ -106,8 +98,8 @@
 			</tr>
 		</table><!-- 선택 끝 -->
 		
-		<input id="search" type="submit" value="예약">
-		<input id="search" type="reset" value="취소">
+		<input class="search" type="submit" value="예약">
+		<input class="search" type="reset" value="취소">
 	</form>
 </section><!-- section main 끝 -->
 </body>

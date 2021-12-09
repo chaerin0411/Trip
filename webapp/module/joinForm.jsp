@@ -1,6 +1,7 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8" pageEncoding="UTF-8"%>
 <head>
-	<link rel="stylesheet" href="css/formjoin.css" type="text/css" media="screen" />
+	<link rel="stylesheet" href="css/form.css" type="text/css" media="screen" />
+	<link rel="stylesheet" href="css/join.css" type="text/css" media="screen" />
 	<script src="js/join.js"></script>
 </head>
 

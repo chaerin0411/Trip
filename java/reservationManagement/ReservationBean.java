@@ -24,7 +24,7 @@ public class ReservationBean {
 	String jdbc_url = "jdbc:mysql://localhost:3306/tripdb?" + 
 			   		  "useUnicode=true&characterEncoding=utf-8&" + 
 			   		  "serverTimezone=UTC&useSSL=false";
-	
+
 	// DB 연결 메서드
 	void connect() {
 		try {
@@ -163,7 +163,7 @@ public class ReservationBean {
 		try {
 			stmt = conn.createStatement();
 			ResultSet rs = stmt.executeQuery(sql);
-			
+
 			while (rs.next()) {
 				ReservationBook reservationbook = new ReservationBook();
 				reservationbook.setReservation_no(rs.getInt("a.reservation_no"));
@@ -190,11 +190,11 @@ public class ReservationBean {
 		connect();
 		ArrayList<ReservationBook> sDatas = new ArrayList<ReservationBook>();
 		String sql = "select * from schedule order by freightfee asc;";
-		
+
 		try {
 			pstmt = conn.prepareStatement(sql);
 			ResultSet rs = pstmt.executeQuery();
-			
+
 			while (rs.next()) {
 				ReservationBook reservationbook = new ReservationBook();
 				reservationbook.setSchedule_no(rs.getString("schedule_no"));
@@ -334,7 +334,7 @@ public class ReservationBean {
 			pstmt.setString(1, start_port);
 			pstmt.setString(2, end_port);
 			ResultSet rs = pstmt.executeQuery();
-			
+
 			while (rs.next()) {
 				ReservationBook reservationbook = new ReservationBook();
 				reservationbook.setSchedule_no(rs.getString("schedule_no"));
@@ -361,7 +361,7 @@ public class ReservationBean {
 			pstmt = conn.prepareStatement(sql);
 			pstmt.setString(1, schedule_no);
 			ResultSet rs = pstmt.executeQuery();
-			
+
 			rs.next(); // 데이터가 하나만 있으므로 rs.next()를 한번만 실행 한다.
 			reservationbook.setSchedule_no(rs.getString("schedule_no"));
 			reservationbook.setDeparture_time(rs.getString("departure_time"));
@@ -375,7 +375,7 @@ public class ReservationBean {
 		catch (SQLException e) { e.printStackTrace(); }
 		finally { disconnect(); } return reservationbook;
 	}
-	
+
 	// 항공 이름 가져오는 메서드
 	public String getAirport(String airport_no) {
 		connect(); Statement stmt = null; String port_name = null;
@@ -385,7 +385,7 @@ public class ReservationBean {
 		try {
 			stmt = conn.createStatement();
 			ResultSet rs = stmt.executeQuery(sql);
-			
+
 			rs.next(); // 데이터가 하나만 있으므로 rs.next()를 한번만 실행 한다.
 			reservationbook.setPort_name(rs.getString("port_name"));
 			port_name = rs.getString("port_name"); rs.close();
@@ -393,7 +393,7 @@ public class ReservationBean {
 		catch (SQLException e) { e.printStackTrace(); }
 		finally { disconnect(); } return port_name;
 	}
-	
+
 	// 항공사 이름 가져오는 메서드
 	public String getAirplane(String airplane_no) {
 		connect(); Statement stmt = null; String airline_name = null;
@@ -403,12 +403,32 @@ public class ReservationBean {
 		try {
 			stmt = conn.createStatement();
 			ResultSet rs = stmt.executeQuery(sql);
-			
+
 			rs.next(); // 데이터가 하나만 있으므로 rs.next()를 한번만 실행 한다.
 			reservationbook.setAirline_name(rs.getString("airline_name"));
 			airline_name = rs.getString("airline_name"); rs.close();
 		}
 		catch (SQLException e) { e.printStackTrace(); }
 		finally { disconnect(); } return airline_name;
+	}
+
+	// 이미 예약된 좌석인지 확인하는 메서드
+	public boolean chkSeat(String serve_seat_no) {
+		connect(); Statement stmt = null;
+		ReservationBook reservationbook = new ReservationBook();
+		String sql = "select serve_seat_no from reservation "+
+					 "where schedule_no="+reservationbook.getSchedule_no()+";";
+
+		try {
+			stmt = conn.createStatement();
+			ResultSet rs = stmt.executeQuery(sql);
+
+			while (rs.next()) {
+				if(serve_seat_no.equals(rs.getString("serve_seat_no")))
+					return false;
+			} rs.close();
+		}
+		catch (SQLException e) { e.printStackTrace(); }
+		finally { disconnect(); } return true;
 	}
 }
