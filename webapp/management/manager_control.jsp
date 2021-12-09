@@ -1,11 +1,12 @@
 <%@ page language="java" contentType="text/html; charset=utf-8"
     pageEncoding="utf-8"  errorPage="manager_error.jsp" import="memberManagement.*, java.util.*"%>
-<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
-<% request.setCharacterEncoding("utf-8"); %>
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
 
 <jsp:useBean id="mbean" class="memberManagement.ManagementBean" scope="session"/> 
 <jsp:useBean id="mb" class="memberManagement.ManagementBook" scope="session"/>
-<jsp:setProperty name="mb" property="*"/>  
+<jsp:setProperty name="mb" property="*"/>
+<% request.setCharacterEncoding("utf-8"); %>
+
 <% 
 	// 컨트롤러 요청 파라미터
 	String action = request.getParameter("action");

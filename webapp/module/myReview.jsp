@@ -33,9 +33,9 @@
 
 		<div id="search">
 			<select><option value="카테고리 전체">카테고리 전체</select>
-			<input type="date" placeholder="search"> ~
-			<input type="date" placeholder="search">
-			<input type="search" placeholder="search">
+			<input type="date" placeholder="연도-월-일"> ~
+			<input type="date" placeholder="연도-월-일">
+			<input type="search" placeholder="검색">
 		</div>
 
 		<!-- category_list 시작 -->

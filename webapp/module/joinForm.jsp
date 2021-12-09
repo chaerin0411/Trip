@@ -64,8 +64,7 @@
 				<td><input type="text" name="member_addr" placeholder="서울시 구로구 경인로 445"></td>
 			</tr>
 			<tr>
-				<td id="trf" colspan=2>
-					모든 필드에 값을 입력해주세요!</td>
+				<td id="trf" colspan=2>모든 필드에 값을 입력해주세요!</td>
 			</tr>
 		</table><!-- table 끝 -->
 		<input type=submit value="회원가입">

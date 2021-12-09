@@ -1,5 +1,6 @@
 @charset "UTF-8";
 
+table { margin-bottom: 120px; }
 #main {
     float: right;
     width: 760px;
@@ -31,10 +32,13 @@
     border: 2px solid #4C7DBD;
 }
 
+#category { margin-bottom: 100px; }
+
 #search {
     margin-top: 40px;
     margin-bottom: 15px;
 }
+#search select { margin-top: -100x; }
 #search select, input {
     width: 140px;
     height: 38px;
@@ -52,6 +56,7 @@
     width: 710px;
     height: 264px;
     padding: 20px;
+    margin-bottom: 20px;
     background-color: #EFEFEF;
 }
 #category_list .items .ihead {
@@ -89,8 +94,8 @@
 #category_list .items .list {
 	z-index: 1;
     position: relative;
-    top: 10px;
-    left: 510px;
+    top: 0px;
+    left: 120px;
 }
 #category_list .items .itemp .title {
     font-size: 19px;
@@ -100,18 +105,6 @@
 #category_list .items .itemp .comment {
     font-size: 14px;
     line-height: 20px;
-}
-#category1_list .items .itemp .time {
-    font-size: 15px;
-    line-height: 38px;
-    color: #98B5DA;
-}
-#category1_list .items .itemp .memo {
-	float: right;
-    font-size: 15px;
-    line-height: 20px;
-    padding: 10px;
-    color: #98B5DA;
 }
 #category_list .items .ibtn {
     float: left;
@@ -125,6 +118,7 @@
     margin-bottom: 3px;
     font-size: 15px;
     font-weight: normal;
+    line-height: 0px;
     color: black;
     background-color: white;
     border: 1px solid #AAA;
@@ -136,9 +130,7 @@
 }
 
 #info { width: 750px; }
-#info th, td, input {
-    font-size: 15px;
-}
+#info th, td, input { font-size: 15px; }
 #info th { width: 200px; }
 #info td { width: 550px; }
 #info #trf {
@@ -150,12 +142,8 @@
 	border-bottom: 1px solid gray;
 	background-color: #EEE;
 }
-#info input {
-    width: 520px;
-    border: none;
-}
+#info input { width: 520px; border: none; }
 #info input[type="submit"], #info input[type="reset"] {
-    width: 150px;
-    height: 50px;
+    width: 150px; height: 50px;
 }
 #info input[type="submit"] { background-color: #4C7DBD; }

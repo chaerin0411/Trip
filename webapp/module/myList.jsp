@@ -44,15 +44,15 @@
 				<option value="카페">카페
 				<option value="국밥">국밥
 			</select>
-			<input type="date" placeholder="search"> ~
-			<input type="date" placeholder="search">
-			<input type="search" placeholder="search">
+			<input type="date" placeholder="연도-월-일"> ~
+			<input type="date" placeholder="연도-월-일">
+			<input type="search" placeholder="검색">
 		</div>
 		
 		<!-- category_list 시작 -->
 		<div id="category_list">
 			<% for(CartBook cb : (ArrayList<CartBook>)cDatas) { %>
-			<div class="items">
+			<div class="items" style="height: 200px;">
 				<svg class="list" viewBox="0 0 32 32" data-svg-content="true" 
 					xmlns="http://www.w3.org/2000/svg" 
 					xmlns:xlink="http://www.w3.org/1999/xlink" 
@@ -70,10 +70,8 @@
 						<br> 주소:
 						<%=cb.getLocation() %><br> 전화:<%=cb.getTel() %><br>
 						홈페이지: https://www.instagram.com/leejeamo…<br>
-						<br>
 					</p>
-					<p class="time"><%=cb.getTime() %></p>
-					<p class="memo">메모남기기</p>
+					<p class="comment"><%=cb.getTime() %></p>
 				</div>
 			</div><% } %>
 		</div><!-- category_list 끝 -->

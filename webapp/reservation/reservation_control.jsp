@@ -149,7 +149,7 @@
 			response.sendRedirect("../index.jsp?CONTENTPAGE=loginForm.jsp");
 		}
 		else { // 로그인 되어있음
-			response.sendRedirect("../index.jsp?CONTENTPAGE=myFlight.jsp");
+			response.sendRedirect("reservation_control.jsp?action=list");
 		}
 	}
 	else out.println("<script>alert('action 파라미터를 확인해 주세요!')</script>");

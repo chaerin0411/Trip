@@ -20,7 +20,7 @@ public class ReservationBean {
 	 */
 
 	/* MySQL 연결정보 */
-	String jdbc_driver = "com.mysql.cj.jdbc.Driver";
+	String jdbc_driver = "com.mysql.jdbc.Driver";
 	String jdbc_url = "jdbc:mysql://localhost:3306/tripdb?" + 
 			   		  "useUnicode=true&characterEncoding=utf-8&" + 
 			   		  "serverTimezone=UTC&useSSL=false";

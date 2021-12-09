@@ -69,8 +69,8 @@
 			</tr>
 			<tr>
 				<td colspan=2>
-					<input type=submit value="수정">
-					<input type=reset value="취소">
+					<input type=submit value="수정" style="line-height: 0px;">
+					<input type=reset value="취소" style="line-height: 0px;">
 				</td>
 			</tr>
 		</table>

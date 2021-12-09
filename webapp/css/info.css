@@ -155,13 +155,14 @@
     border-bottom: 1px solid #1A4275;
 }
 
-#category1 select, input {
+select, input, #search {
+	height: 30x;
     padding: 5px 12px;
     border: 1px solid lightgray;
     /* border: none; */
 }
 #category1 select { width: 222px; }
-#category1 input { width: 400px; }
+#search { width: 400px; }
 
 #ct1, #ct2 { margin-top: 30px; }
 #cr1, #cr2 { margin-bottom: 30px; }

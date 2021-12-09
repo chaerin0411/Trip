@@ -25,8 +25,8 @@
 		</div>
 		<div id="category1_menu">
 			<ul>
-				<li class="selected"><a href="index.jsp?CONTENTPAGE=myReservation.jsp"><b>&#128467;</b> 예약 조회</a></li>
-				<li><a href="index.jsp?CONTENTPAGE=myPage.jsp"><b>&#128477;</b> 체크인</a></li>
+				<li class="selected"><a href="index.jsp?CONTENTPAGE=myFlight.jsp"><b>&#128467;</b> 예약 조회</a></li>
+				<li><a href="index.jsp?CONTENTPAGE=myHotel.jsp"><b>&#128477;</b> 체크인</a></li>
 				<li><a href="index.jsp?CONTENTPAGE=reservation.jsp"><b>&#9992;</b> 항공권 현황</a></li>
 			</ul>
 		</div>

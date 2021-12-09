@@ -46,11 +46,11 @@
 				<li>인천</li>
 				<li>전주</li>
 			</ul>
-			<select>
+			<select style="height: 35px;">
 				<option value="국내">국내
 				<option value="해외">해외	
 			</select>
-			<input type="search" placeholder="search">
+			<input type="search" placeholder="search" style="width: 400px; height: 35px; border-radius: 0px;">
 	</section><!-- section category1 끝 -->
 
 	<!-- section category2 시작 -->

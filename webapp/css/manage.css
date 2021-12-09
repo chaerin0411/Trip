@@ -13,7 +13,7 @@ fieldset {
 }
 
 #navi {
-    width: 895px;
+    width: 1000px;
     height: 24px;
     line-height: 22px;
     font-size: 14px;
@@ -30,29 +30,20 @@ fieldset {
 #navi li a:hover { color: black; }
 #navi img { width: 20px; }
 
-#left {
-    float: left;
-    color: lightgray;
-    font-size: 15px;
-    font-weight: bold;
-    width: 100px;
-    height: 500px;
-    padding-right: 35px;
-    margin-top: 40px;
-    border-right: 2px solid gray;
-}
-#left li {
-    display: block;
-    text-align: right;
-    color: #888888;
-    padding: 3px 0;
-}
-#left li:hover { color: black; }
-#left hr {
+#main {
     text-align: center;
-    width: 50px;
-    margin: 20px auto;
-    margin-left: 35px;
+    max-width: 500px;
+    max-height: 1500px;
+    margin: 0 auto;
+    margin-top: 70px;
+    padding: 100px;
+    margin-bottom: 170px;
+    background-color: #eeeeee;
+    border-radius: 100px;
+}
+h3 {
+    font-size: 25px;
+    margin-bottom: 30px;
 }
 
 table {
@@ -60,18 +51,19 @@ table {
 	border-collapse: collapse;
 	text-align: center;
 	margin-top: 40px;
-}
- 
+} 
 td,th {
 	font-size: 10pt;
 	height: 30px;
 	padding: 5px;
 }
 th {
-	background-color: #98B5DA;
+	background-color: #dddddd;
 	color: #ffffff;
 	font-family: Georgia;
 }
+.ths a { cursor: pointer; color: #2967B9; }
+.ths:hover a { text-decoration: underline; }
 tr { background-color: #ffffff; }
 td {
 	color: #000000;
@@ -84,7 +76,7 @@ input {
 	border: 1px solid #888888;
 	border-radius: 5px;
 }
-input[type="submit"], [type="reset"] {
+input[type="submit"],[type="reset"],[type="button"] {
 	height: 40px;
 	width:80px;
 	font-size:15px;
@@ -92,7 +84,4 @@ input[type="submit"], [type="reset"] {
 	margin: 5px;
 	background-color: #2967B9;
 	color: #fff;
-}
-input[type="reset"] {
-	background-color: #5E5E5E;
 }

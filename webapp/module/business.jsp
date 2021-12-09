@@ -1,13 +1,8 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8" pageEncoding="UTF-8"
 	import="java.util.*, reservationManagement.*, memberManagement.*"%>
-
 <jsp:useBean id="rbean" class="reservationManagement.ReservationBean" scope="session" />
 <jsp:useBean id="rb" class="reservationManagement.ReservationBook" scope="session" />
-
-<head>
-	<link rel="stylesheet" href="css/form.css" type="text/css" media="screen" />
-	<link rel="stylesheet" href="css/seat.css" type="text/css" media="screen" />
-</head>
+<head><link rel="stylesheet" href="css/seat.css" type="text/css" media="screen" /></head>
 
 <!-- business.jsp -->
 <body>

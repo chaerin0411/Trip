@@ -48,11 +48,14 @@ td,th {
 	border: 0.5px solid lightgray;
 	/* border: none; */
 }
-td { color: black; }
+td {
+	color: black;
+	background-color: white;
+}
 th {
 	width: 180px;
 	padding: 5px;
-	font-family: Georgia;
+	font-family: '맑은 고딕';
 	color: white;
 	background-color: #98B5DA;
 }
@@ -99,7 +102,7 @@ input[type="submit"],[type="reset"],[type="button"] {
 	background-color: #5E5E5E;
 }
 input[type="submit"]:active,[type="reset"]:active,[type="button"]:active {
-    background-color: #444444;
+    background-color: #444;
 }
 input[type="button"] { cursor: default; }
 input[type="submit"] {
@@ -109,7 +112,7 @@ input[type="submit"] {
 }
 input[type="submit"].search, input[type="reset"].search {
     margin-top: 30px;
-    width: 375px;
+    width: 370px;
     height: 60px;
 
 }

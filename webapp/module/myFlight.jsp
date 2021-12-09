@@ -34,8 +34,8 @@
 <!-- section main 시작 -->
 <section id="main">
 	<h3>나의 예약</h3>
-	<input class="selected" type="button" value="항공">
-	<input type="button" value="숙박">
+	<a href="index.jsp?CONTENTPAGE=myFlight.jsp"><input class="selected" type="button" value="항공"></a>
+    <a href="index.jsp?CONTENTPAGE=myHotel.jsp"><input type="button" value="숙박" ></a>
 	<input type="button" value="투어·티켓">
 
 	<form method=post action="../reservation/reservation_control.jsp">

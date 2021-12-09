@@ -72,6 +72,16 @@
     background: white;
 }
 
+input[type="checkbox"] {
+	cursor: pointer;
+	width: 13px;
+	height: 13px;
+	line-height: 13px;
+	vertical-align: middle;
+	border: 1px solid #888888;
+	border-radius: 5px;
+}
+input[type="submit"] { padding: 0; }
 #etc_area {
     width: 340px;
     font-size: 13px;
