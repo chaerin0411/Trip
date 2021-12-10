@@ -94,7 +94,7 @@
 		session.setAttribute("sDatas", sDatas);
 		session.setAttribute("seat", request.getParameter("grade"));
 		rb.setGrade(request.getParameter("grade"));
-		request.setAttribute("selop", "pa");
+		session.setAttribute("selop", "pa");
 		response.sendRedirect("../index.jsp?CONTENTPAGE=reservationProcess1.jsp");
 	}
 	
@@ -104,7 +104,7 @@
 		session.setAttribute("sDatas", sDatas);
 		session.setAttribute("seat", request.getParameter("grade"));
 		rb.setGrade(request.getParameter("grade"));
-		request.setAttribute("selop", "pd");
+		session.setAttribute("selop", "pd");
 		response.sendRedirect("../index.jsp?CONTENTPAGE=reservationProcess1.jsp");
 	}
 	
@@ -114,7 +114,7 @@
 		session.setAttribute("sDatas", sDatas);
 		session.setAttribute("seat", request.getParameter("grade"));
 		rb.setGrade(request.getParameter("grade"));
-		request.setAttribute("selop", "da");
+		session.setAttribute("selop", "da");
 		response.sendRedirect("../index.jsp?CONTENTPAGE=reservationProcess1.jsp");
 	}
 	
@@ -124,7 +124,7 @@
 		session.setAttribute("sDatas", sDatas);
 		session.setAttribute("seat", request.getParameter("grade"));
 		rb.setGrade(request.getParameter("grade"));
-		request.setAttribute("selop", "dd");
+		session.setAttribute("selop", "dd");
 		response.sendRedirect("../index.jsp?CONTENTPAGE=reservationProcess1.jsp");
 	}
 	

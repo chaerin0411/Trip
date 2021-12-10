@@ -84,7 +84,7 @@
 			</div><!-- etc_area 끝 -->
 			
 		</fieldset><!-- field set 끝 -->
-		<div id="submit_area"><input type="submit" value="로그인"></div>
+		<div id="submit_area"><input type="submit" value="로그인" style="margin: 0;"></div>
 	</form>
 	
 	<form action="index.jsp?CONTENTPAGE=joinForm.jsp" method="post">

@@ -1,13 +1,12 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8" pageEncoding="UTF-8"
 	import="java.util.*, reservationManagement.*, memberManagement.*"%>
 <%
-	String selop = (String)request.getAttribute("selop");
-	String pa = "", pd = "", da = "", dd = "";
-	if(selop == null) selop = "";
-	if(selop.equals("pa")) pa="selected";
-	if(selop.equals("pd")) pd="selected";
-	if(selop.equals("da")) da="selected";
-	if(selop.equals("dd")) dd="selected";
+	String selop = (String)session.getAttribute("selop");
+	String str = "정렬 방법 선택"; if(selop == null) selop = "";
+	if(selop.equals("pa")) str = "가격 낮은 순";
+	if(selop.equals("pd")) str = "가격 높은 순";
+	if(selop.equals("da")) str = "출발시간 빠른 순";
+	if(selop.equals("dd")) str = "출발시간 빠른 순";
 %>
 <jsp:useBean id="sDatas" scope="session" class="java.util.ArrayList" />
 
@@ -45,10 +44,11 @@
 		<div id="selop">
 			<h3>항공사별 가격비교</h3>
 			<select name="order" onchange="location.href=this.value">
-				<option value="reservation/reservation_control.jsp?action=lowPrice" <%= pa %>>가격 낮은 순
-				<option value="reservation/reservation_control.jsp?action=highPrice" <%= pd %>>가격 높은 순
-				<option value="reservation/reservation_control.jsp?action=fastDeparture" <%= da %>>출발시간 빠른 순
-				<option value="reservation/reservation_control.jsp?action=lowDeparture" <%= dd %>>출발시간 느린 순
+				<option value="index.jsp?CONTENTPAGE=reservationProcess1.jsp"><%= str %>
+				<option value="reservation/reservation_control.jsp?action=lowPrice">가격 낮은 순
+				<option value="reservation/reservation_control.jsp?action=highPrice">가격 높은 순
+				<option value="reservation/reservation_control.jsp?action=fastDeparture">출발시간 빠른 순
+				<option value="reservation/reservation_control.jsp?action=lowDeparture">출발시간 느린 순
 			</select>
 		</div>
 		<table>
