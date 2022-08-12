@@ -1,5 +1,9 @@
-# 2021-2JSP
+# Trip
+2021-2JSP
 Ticket Reservation Site with Dib Function on Travel Product
+
+![image](https://user-images.githubusercontent.com/65184168/184336341-a7c6e64b-e0d1-489e-90b0-d1e5a4bf3439.png)
+
 
 # port busy 오류 해결
 cmd 관리자권한 실행
